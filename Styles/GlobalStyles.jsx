@@ -33,6 +33,10 @@ main {
   height: 100vh;
 }
 
+#main-content {
+  margin-top: 58.23px;
+}
+
 .hover-transition {
   transition-duration: 0.5s;
 }

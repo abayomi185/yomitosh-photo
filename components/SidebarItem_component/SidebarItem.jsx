@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import Style from '../Styles/SidebarItem_Style'
+import Style from './SidebarItem.styled'
 
 function SidebarItem(props) {
     return (

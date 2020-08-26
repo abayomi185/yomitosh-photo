@@ -1,19 +1,15 @@
-export const variables = {
+export const coral_color = '#FF7F50'
 
-    coral_color: '#FF7F50',
+export const white_color = '#fff'
 
-    white_color: '#fff',
+export const black_color = '#000'
 
-    black_color: '#000',
+export const pink_color = '#f5deff'
 
-    pink_color: '#f5deff',
+export const grey_color = '#363636'
 
-    grey_color: '#363636',
+export const mobile = '320px'
 
-    mobile: '320px',
+export const tablet = '768px'
 
-    tablet: '768px',
-
-    desktop: '1024px'
-
-}
+export const desktop = '1024px'

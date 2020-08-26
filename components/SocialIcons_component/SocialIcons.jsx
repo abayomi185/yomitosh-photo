@@ -1,6 +1,6 @@
 import Link from 'next/link'
-import * as styles_var from '../Styles/Variables'
-import SocialIcons_Style from '../Styles/SocialIcons_Style'
+import * as styles_var from '../../Styles/Variables'
+import SocialIcons_Style from './SocialIcons.styled'
 import InstagramIcon from '@material-ui/icons/Instagram';
 import MailOutlineIcon from '@material-ui/icons/MailOutline';
 

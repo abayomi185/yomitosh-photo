@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import * as styles_var from './Variables'
+import * as styles_var from '../../Styles/Variables'
 
 const sidebarItem = styled.div`
 

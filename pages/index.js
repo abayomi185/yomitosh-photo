@@ -1,13 +1,14 @@
 import Head from 'next/head'
 import styled, { ThemeProvider } from 'styled-components'
-import GlobalStyle from '../Styles/Global_Style'
-import Sidebar from '../components/Sidebar'
-import { variables } from '../Styles/Variables'
+import GlobalStyle from '../Styles/GlobalStyles'
+import Sidebar from '../components/Sidebar_component/Sidebar'
 
 export default function Home() {
+
+  
+
   return (
-    <ThemeProvider theme={variables}>
-    {/* <ThemeProvider theme={{ mode: 'light' }}></ThemeProvider> */}
+    <ThemeProvider theme={{ mode: 'light' }}>
       <GlobalStyle />
       <div className="container">
         <Head>
@@ -17,8 +18,12 @@ export default function Home() {
           <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&amp;family=Roboto+Slab:wght@300&amp;display=swap" rel="stylesheet"></link>
         </Head>
         <main>
-          <Sidebar />
-          <h1>This is main</h1>
+          <nav>
+            <Sidebar />
+          </nav>
+          <div id="main-content">
+            <h1>This is main and this is main two and this is main three</h1>
+          </div>
         </main>
 
         <footer>
