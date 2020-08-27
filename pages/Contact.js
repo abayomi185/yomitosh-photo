@@ -1,12 +1,10 @@
 import Link from 'next/link'
-import Layout from '.';
+import Layout from './Layout';
 
 export default function Contact() {
     return (
-        <Layout>
             <div>
                 <h1>079me</h1>
             </div>
-        </Layout>
     )
 }

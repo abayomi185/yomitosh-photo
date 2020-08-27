@@ -1,4 +1,4 @@
-import Layout from '.';
+import Layout from './Layout';
 
 export default function Highlights() {
     return (
