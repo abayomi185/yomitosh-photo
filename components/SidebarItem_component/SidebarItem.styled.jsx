@@ -13,6 +13,10 @@ li:hover {
   background-color: ${styles_var.coral_color};
 }
 
+.active-item {
+  background-color: ${styles_var.coral_color};
+}
+
 p {
   font-size: 1rem;
   margin: 0;

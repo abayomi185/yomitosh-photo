@@ -25,10 +25,10 @@ function Sidebar() {
 
             <div className="sidebar-items">
                 <ul>
-                    <SidebarItem item="Highlights" link="" />
-                    <SidebarItem item="Galleries" link="" />
-                    <SidebarItem item="About Me" link="" />
-                    <SidebarItem item="Contact" link="" />
+                    <SidebarItem item="Highlights" link="/"/>
+                    <SidebarItem item="Galleries" link="/Galleries"/>
+                    <SidebarItem item="About Me" link="/About" route="About"/>
+                    <SidebarItem item="Contact" link="/Contact"/>
                 </ul>
             </div>
             <div className="social-icons">

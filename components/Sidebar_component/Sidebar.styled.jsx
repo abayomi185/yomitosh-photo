@@ -23,7 +23,7 @@ const sidebar = styled.div`
   padding-bottom: 0.5rem;
   z-index: -1;
   position: absolute;
-  transform: ${({ openMenu }) => openMenu ? 'translateY(58px)' : 'translateY(-150px)' };
+  transform: ${({ openMenu }) => openMenu ? 'translateY(58px)' : 'translateY(-200px)' };
   width: 100%;
   background: ${styles_var.white_color};
   /* visibility: ${({ openMenu }) => openMenu ? 'visible' : 'hidden' }; */
@@ -35,7 +35,7 @@ const sidebar = styled.div`
   /* opacity: ${({ openMenu }) => openMenu ? '1' : '0' };
   visibility: ${({ openMenu }) => openMenu ? 'visible' : 'hidden' };
   transition: opacity 600ms, visibility 600ms; */
-  transition: 0.3s ease-in-out;
+  transition: 0.4s ease-in-out;
 }
 
 .sidebar-brand {
@@ -95,6 +95,7 @@ ul {
 
 .sidebar-mobile-top {
   justify-content: center;
+  z-index: 1;
 }
 
 .sidebar-items {

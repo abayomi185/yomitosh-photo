@@ -8,7 +8,7 @@ import MailOutlineIcon from '@material-ui/icons/MailOutline';
 function SocialIcons(props) {
 
     const instagram = 'https://instagram.com/yomi185'
-    const mail = 'mailto:abayomi.ikuru@gamil.com'
+    const mail = 'mailto:yomiosh.yt@gamil.com'
 
     return (
         <SocialIcons_Style>

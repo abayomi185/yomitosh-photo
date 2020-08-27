@@ -35,10 +35,16 @@ main {
 
 #main-content {
   margin-top: 58.23px;
+  transition-duration: 0.5s;
 }
 
 .hover-transition {
-  transition-duration: 0.5s;
+  transition-duration: 0.3s;
+}
+
+${'' /* For transition testing purposes */}
+.transition-group-appear {
+  opacity: 0.01;
 }
 
 h1, h2, h3, h4, h5, h6, p, small {
@@ -55,8 +61,12 @@ h1 {
 }
 
 @media only screen and (min-device-width: ${styles_var.tablet}) {
-    /* Tablet - 2 Column grid */
-    
+/* Tablet - 2 Column grid */
+
+#main-content {
+  margin-top: 0px;
+}
+
 }
 
 /* Another possible breakpoint here - at 992px */
