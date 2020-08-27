@@ -13,6 +13,8 @@ export default function Layout({ children }) {
 
   const appContext = createContext(null)
 
+  // refactor branch
+
   return (
     <ThemeProvider theme={{ mode: 'light' }}>
       <GlobalStyle />
