@@ -100,10 +100,17 @@ ul {
 
 .sidebar-items {
   display: block;
+  height: 2.8rem
 }
 
 .sidebar-burgermenu {
   display: none;
+}
+
+ul {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0 13rem;
 }
 
 }
@@ -131,6 +138,11 @@ ul {
 
 .copyright-text {
   font-size: 0.7rem;
+}
+
+ul {
+  display: block;
+  margin: 0;
 }
 
 }

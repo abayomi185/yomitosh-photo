@@ -1,15 +1,18 @@
 import Head from 'next/head'
-import { useRouter } from 'next/router'
+import { useRouter, useContext } from 'next/router'
 import { motion, AnimatePresence } from "framer-motion"
 import Sidebar from '../components/Sidebar_component/Sidebar'
+import { AppState } from '../context/AppState'
 
 export default function Layout(props) {
 
   const router = useRouter()
 
+  
+
   return (
     <>
- 
+      
       <div className="container">
         <Head>
           <title>Y O M I .</title>
@@ -28,6 +31,7 @@ export default function Layout(props) {
             {/* <h1>This is main and this is main two and this is main three</h1> */}
             {/* {router.pathname == "/" && <Highlights />} */}
             {props.children}
+
           </motion.div>
         </main>
 

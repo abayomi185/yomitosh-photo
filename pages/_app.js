@@ -12,7 +12,7 @@ export default function MyApp({ Component, pageProps }) {
         <ThemeProvider theme={{ mode: 'light' }}>
             <GlobalStyle />
             <AppState.Provider
-                menuState={{ getState: openMenu, setState: setOpenMenu }}
+                value={{ navMenu: [openMenu, setOpenMenu], otherValue: "experimental"}}
             >
                 <Layout>
                     <Component {...pageProps} />

@@ -29,21 +29,49 @@ a {
   color: ${styles_var.black_color};
   text-decoration: none;
 }
+
 p:hover {
   color: ${styles_var.white_color};
 }
 
-a:hover {
-  color: ${styles_var.white_color};
-}
 }
 
 @media only screen and (min-device-width: ${styles_var.tablet}) {
 
+.active-item {
+  p {
+    color: ${styles_var.black_color};
+    border-bottom: 3px solid ${styles_var.coral_color};
+  }
+
+  background-color: ${styles_var.white_color};
+
+}
+
+li:hover {
+    background-color: ${styles_var.white_color};
+}
+
+p {
+  padding: 7px;
+}
 
 }
 @media only screen and (min-device-width: ${styles_var.desktop}) {
 
+.active-item {
+  p {
+    color: ${styles_var.white_color};
+    border-bottom: none;
+  }
+
+  background-color: ${styles_var.coral_color};
+
+}
+
+li:hover {
+    background-color: ${styles_var.coral_color};
+}
 
 p {
   font-size: 1rem;

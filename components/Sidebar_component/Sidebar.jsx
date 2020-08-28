@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import { useState, useContext } from 'react';
 import Link from 'next/link'
 import { AppState } from '../../context/AppState'
 import Sidebar_Style from './Sidebar.styled.jsx'
@@ -6,12 +6,13 @@ import BurgerMenu from '../Burger_component/Burger'
 import SidebarItem from '../SidebarItem_component/SidebarItem'
 import SocialIcons from '../SocialIcons_component/SocialIcons'
 
-function Sidebar() {
+export default function Sidebar() {
 
-    const navMenu = useContext(AppState)
-
+    const { navMenu } = useContext(AppState)
+    const [openMenu, setOpenMenu] = navMenu
+    
     return (
-        <Sidebar_Style openMenu={navMenu.menuState.getState} setOpenMenu={navMenu.menuState.setState}>
+        <Sidebar_Style openMenu={openMenu} setOpenMenu={setOpenMenu}>
             <div className="sidebar">
 
             <div className="sidebar-mobile-top">
@@ -43,5 +44,3 @@ function Sidebar() {
         
     )
 }
-
-export default Sidebar
