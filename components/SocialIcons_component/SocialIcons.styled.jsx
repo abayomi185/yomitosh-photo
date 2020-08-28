@@ -3,7 +3,7 @@ import * as styles_var from '../../Styles/Variables'
 
 const socialIcons = styled.div`
 
-@media only screen and (min-device-width: ${styles_var.mobile}) {
+@media only screen and (min-width: ${styles_var.mobile}) {
 
 .icons {
     display: none;
@@ -19,10 +19,10 @@ const socialIcons = styled.div`
 
 }
 
-@media only screen and (min-device-width: ${styles_var.tablet}) {  
+@media only screen and (min-width: ${styles_var.tablet}) {  
 
 }
-@media only screen and (min-device-width: ${styles_var.desktop}) {
+@media only screen and (min-width: ${styles_var.desktop}) {
 
 .icons {
   display: block;

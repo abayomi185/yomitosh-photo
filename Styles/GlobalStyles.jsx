@@ -3,7 +3,7 @@ import * as styles_var from './Variables'
 
 const GlobalStyle = createGlobalStyle`
   
-@media only screen and (min-device-width: ${styles_var.mobile}) {
+@media only screen and (min-width: ${styles_var.mobile}) {
 
 /* 1 column grid */
 
@@ -60,7 +60,7 @@ h1 {
 
 }
 
-@media only screen and (min-device-width: ${styles_var.tablet}) {
+@media only screen and (min-width: ${styles_var.tablet}) {
 /* Tablet - 2 Column grid */
 
 #main-content {
@@ -71,7 +71,7 @@ h1 {
 
 /* Another possible breakpoint here - at 992px */
 
-@media only screen and (min-device-width: ${styles_var.desktop}) {
+@media only screen and (min-width: ${styles_var.desktop}) {
 /* Desktop */
 main {
   flex-direction: row;

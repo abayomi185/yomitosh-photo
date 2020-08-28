@@ -3,7 +3,7 @@ import * as styles_var from '../../Styles/Variables'
 
 const sidebar = styled.div`
 
-@media only screen and (min-device-width: ${styles_var.mobile}) {
+@media only screen and (min-width: ${styles_var.mobile}) {
 
 .sidebar {
   display: flex;
@@ -74,7 +74,7 @@ ul {
 
 }
 
-@media only screen and (min-device-width: ${styles_var.tablet}) {  
+@media only screen and (min-width: ${styles_var.tablet}) {  
 
 .sidebar{
   position: static;
@@ -100,7 +100,13 @@ ul {
 
 .sidebar-items {
   display: block;
-  height: 2.8rem
+  height: 2.8rem;
+}
+
+.sticky-nav {
+  position: fixed;
+  padding-top: 1rem;
+  transition-duration: 1.2s;
 }
 
 .sidebar-burgermenu {
@@ -115,7 +121,7 @@ ul {
 
 }
 
-@media only screen and (min-device-width: ${styles_var.desktop}) {
+@media only screen and (min-width: ${styles_var.desktop}) {
 
 .sidebar{
   /* flex-direction: column; */

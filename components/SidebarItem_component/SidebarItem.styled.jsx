@@ -3,7 +3,7 @@ import * as styles_var from '../../Styles/Variables'
 
 const sidebarItem = styled.div`
 
-@media only screen and (min-device-width: ${styles_var.mobile}) {
+@media only screen and (min-width: ${styles_var.mobile}) {
 
 li {
   
@@ -36,7 +36,7 @@ p:hover {
 
 }
 
-@media only screen and (min-device-width: ${styles_var.tablet}) {
+@media only screen and (min-width: ${styles_var.tablet}) {
 
 .active-item {
   p {
@@ -54,10 +54,16 @@ li:hover {
 
 p {
   padding: 7px;
+  padding-right: 7px;
+  padding-left: 7px;
+}
+
+p:hover {
+  color: ${styles_var.lightgray_color};
 }
 
 }
-@media only screen and (min-device-width: ${styles_var.desktop}) {
+@media only screen and (min-width: ${styles_var.desktop}) {
 
 .active-item {
   p {
