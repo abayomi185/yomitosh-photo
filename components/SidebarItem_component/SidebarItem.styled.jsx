@@ -54,8 +54,6 @@ li:hover {
 
 p {
   padding: 7px;
-  padding-right: 7px;
-  padding-left: 7px;
 }
 
 p:hover {
@@ -63,6 +61,7 @@ p:hover {
 }
 
 }
+
 @media only screen and (min-width: ${styles_var.desktop}) {
 
 .active-item {
@@ -75,16 +74,23 @@ p:hover {
 
 }
 
+li {
+  margin: 0 20px;
+}
+
 li:hover {
     background-color: ${styles_var.coral_color};
 }
 
 p {
   font-size: 1rem;
-  margin: 0;
   padding: 2.5% 0 2.5% 20%;
   color: ${styles_var.black_color};
   text-align: left;
+}
+
+p:hover {
+  color: ${styles_var.white_color};
 }
 
 }

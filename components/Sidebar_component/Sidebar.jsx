@@ -56,12 +56,16 @@ export default function Sidebar() {
                         <SidebarItem item="Contact" link="/Contact" />
                     </ul>
                 </div>
-                <div className="social-icons">
-                    <SocialIcons />
+                
+                <div className="footer">
+                    <div className="social-icons">
+                        <SocialIcons />
+                    </div>
+                    <div className="sidebar-footer">
+                        <small className="copyright-text">Copyright &copy; All rights reserved</small>
+                    </div>
                 </div>
-                <div className="sidebar-footer">
-                    <small className="copyright-text">Copyright &copy; All rights reserved</small>
-                </div>
+
             </div>
         </Sidebar_Style>
 

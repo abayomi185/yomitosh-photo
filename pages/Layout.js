@@ -34,9 +34,6 @@ export default function Layout(props) {
 
           </motion.div>
         </main>
-
-        <footer>
-        </footer>
       </div>
     </>
   )

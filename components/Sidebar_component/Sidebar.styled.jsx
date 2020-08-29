@@ -65,6 +65,10 @@ ul {
   margin: 0;
 }
 
+.footer {
+  
+}
+
 .sidebar-footer {
   text-align: center;
   flex-shrink: 0;
@@ -116,7 +120,7 @@ ul {
 ul {
   display: flex;
   justify-content: space-evenly;
-  margin: 0 13rem;
+  margin: 0 12rem;
 }
 
 }
@@ -125,6 +129,7 @@ ul {
 
 .sidebar{
   /* flex-direction: column; */
+  position: fixed;
   width: 240px;
   height: 100vh;
 }

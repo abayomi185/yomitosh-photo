@@ -76,6 +76,11 @@ h1 {
 main {
   flex-direction: row;
 }
+
+#main-content {
+  margin-left: 240px;
+}
+
 }
 
 `;
