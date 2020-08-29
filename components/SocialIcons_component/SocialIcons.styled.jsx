@@ -5,10 +5,6 @@ const socialIcons = styled.div`
 
 @media only screen and (min-width: ${styles_var.mobile}) {
 
-.icons {
-    display: none;
-}
-
 .social-icon {
   padding: 0 0.1rem;
 }
@@ -25,7 +21,6 @@ const socialIcons = styled.div`
 @media only screen and (min-width: ${styles_var.desktop}) {
 
 .icons {
-  display: block;
   text-align: center;
   padding-bottom: 0.2rem;
 }

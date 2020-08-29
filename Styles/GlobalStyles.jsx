@@ -12,6 +12,7 @@ html, body {
   padding: 0;
   margin: 0;
   background-color: ${styles_var.pink_color};
+  min-height: 100%;
   min-width: 320px;
 }
 
@@ -73,6 +74,11 @@ h1 {
 
 @media only screen and (min-width: ${styles_var.desktop}) {
 /* Desktop */
+
+html, body {
+  min-height: 420px;
+}
+
 main {
   flex-direction: row;
 }

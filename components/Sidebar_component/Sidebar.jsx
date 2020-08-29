@@ -57,11 +57,11 @@ export default function Sidebar() {
                     </ul>
                 </div>
                 
-                <div className="footer">
+                <div className="sidebar-footer">
                     <div className="social-icons">
                         <SocialIcons />
                     </div>
-                    <div className="sidebar-footer">
+                    <div className="sidebar-footer-text">
                         <small className="copyright-text">Copyright &copy; All rights reserved</small>
                     </div>
                 </div>

@@ -24,18 +24,10 @@ const sidebar = styled.div`
   padding-bottom: 0.5rem;
   z-index: -1;
   position: absolute;
+  /* -webkit-transform: translate3d(0, 0, 0); */
   transform: ${({ openMenu }) => openMenu ? 'translateY(58px)' : 'translateY(-200px)' };
   width: 100%;
   background: ${styles_var.white_color};
-  /* visibility: ${({ openMenu }) => openMenu ? 'visible' : 'hidden' }; */
-  /* height: ${({ openMenu }) => openMenu ? '' : '0px' }; */
-  /* transition: height 0.3s; */
-  /* display: ${({ openMenu }) => openMenu ? 'block' : 'none' }; */
-  /* Can you imagine, this is just ES6 syntax to pass create an anonymous function with a destructured openMenu passed */
-
-  /* opacity: ${({ openMenu }) => openMenu ? '1' : '0' };
-  visibility: ${({ openMenu }) => openMenu ? 'visible' : 'hidden' };
-  transition: opacity 600ms, visibility 600ms; */
   transition: 0.4s ease-in-out;
 }
 
@@ -66,15 +58,13 @@ ul {
   margin: 0;
 }
 
-.footer {
-  
+.sidebar-footer {
+  display: none;
 }
 
-.sidebar-footer {
+.sidebar-footer-text {
   text-align: center;
   flex-shrink: 0;
-  margin-bottom: 2rem;
-  display: none;
 }
 
 }
@@ -132,18 +122,35 @@ ul {
   position: fixed;
   width: 240px;
   height: 100vh;
+  /* transform-style: flat; */
 }
 
+.sidebar-mobile-top {
+  display: block;
+}
+
+/* .sidebar-brand {
+  padding: 4rem 1rem;
+  flex-shrink: 0;
+} */
+
 .sidebar-brand {
-  padding: 4rem;
+  padding: 0;
+}
+
+.brand-name {
+  margin: 4rem auto;
 }
 
 .sidebar-items {
+  height: auto;
   flex: 1 0 auto;
   padding-bottom: 1rem;
 }
 
 .sidebar-footer {
+  flex-shrink: 0;
+  margin-bottom: 2rem;
   display: block;
 }
 
