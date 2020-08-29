@@ -17,6 +17,7 @@ const sidebar = styled.div`
   display: flex;
   justify-content: space-between;
   background: ${styles_var.white_color};
+  z-index: 1;
 }
 
 .sidebar-items {
@@ -99,7 +100,6 @@ ul {
 
 .sidebar-mobile-top {
   justify-content: center;
-  z-index: 1;
 }
 
 .sidebar-items {
