@@ -8,11 +8,11 @@ export default function Layout(props) {
 
   const router = useRouter()
 
-  
+
 
   return (
     <>
-      
+
       <div className="container">
         <Head>
           <title>Y O M I .</title>
@@ -26,13 +26,14 @@ export default function Layout(props) {
             <Sidebar />
           </nav>
 
+          <div className="content-area">
+            <motion.div id="main-content" exit={{ opacity: 0 }} transition={{ duration: 2 }}>
+              {/* <h1>This is main and this is main two and this is main three</h1> */}
+              {/* {router.pathname == "/" && <Highlights />} */}
+              {props.children}
+            </motion.div>
+          </div>
 
-          <motion.div id="main-content" exit={{ opacity: 0 }} transition={{ duration: 2 }}>
-            {/* <h1>This is main and this is main two and this is main three</h1> */}
-            {/* {router.pathname == "/" && <Highlights />} */}
-            {props.children}
-
-          </motion.div>
         </main>
       </div>
     </>

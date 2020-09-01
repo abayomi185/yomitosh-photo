@@ -72,13 +72,14 @@ ul {
 @media only screen and (min-width: ${styles_var.tablet}) {  
 
 .sidebar{
-  position: static;
+  position: relative;
+  /* overflow-y: hidden; */
 }
 
 .sidebar-items {
   padding-bottom: 0.5rem;
   z-index: 0;
-  position: static;
+  position: relative;
   transform: translateY(0px);
 }
 
@@ -100,7 +101,11 @@ ul {
 .sticky-nav {
   position: fixed;
   padding-top: 1rem;
-  transition-duration: 1.2s;
+  /* transition-duration: 0.2s; */
+}
+
+.sticky-nav-aid {
+  /* margin-bottom: 52.8px; */
 }
 
 .sidebar-burgermenu {
@@ -121,7 +126,7 @@ ul {
   /* flex-direction: column; */
   position: fixed;
   width: 240px;
-  height: 100vh;
+  height: 100%;
   /* transform-style: flat; */
 }
 
@@ -129,17 +134,8 @@ ul {
   display: block;
 }
 
-/* .sidebar-brand {
-  padding: 4rem 1rem;
-  flex-shrink: 0;
-} */
-
 .sidebar-brand {
-  padding: 0;
-}
-
-.brand-name {
-  margin: 4rem auto;
+  padding: 4rem 3.9rem;
 }
 
 .sidebar-items {

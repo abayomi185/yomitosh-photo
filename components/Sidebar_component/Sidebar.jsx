@@ -30,15 +30,18 @@ export default function Sidebar() {
     })
 
     let stickyNavClass = [];
+    let stickyNavAidClass = [];
+
     if (scrolled) {
         stickyNavClass.push('sticky-nav');
+        stickyNavAidClass.push('sticky-nav-aid');
     }
 
     return (
         <Sidebar_Style openMenu={openMenu} setOpenMenu={setOpenMenu}>
             <div className="sidebar">
 
-                <div className="sidebar-mobile-top">
+                <div className={`sidebar-mobile-top ${stickyNavAidClass}`}>
                     <div className="sidebar-brand">
                         <Link href="/"><a className="brand-link hover-transition"><h1 className="brand-name">Yomi.</h1></a></Link>
                     </div>
@@ -57,7 +60,7 @@ export default function Sidebar() {
                     </ul>
                 </div>
                 
-                <div className="sidebar-footer">
+                <div className="sidebar-footer hover-transition">
                     <div className="social-icons">
                         <SocialIcons />
                     </div>

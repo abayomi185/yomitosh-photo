@@ -34,9 +34,21 @@ main {
   height: 100vh;
 }
 
+nav {
+  z-index: 1;
+}
+
+.content-area {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
 #main-content {
   margin-top: 58.23px;
   transition-duration: 0.5s;
+  ${'' /* justify-content: center; */}
+  width: 100%;
 }
 
 .hover-transition {
