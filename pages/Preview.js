@@ -3,7 +3,7 @@ import Layout from './Layout';
 import { useEffect, useContext } from 'react'
 import { AppState } from '../context/AppState'
 
-export default function Contact() {
+export default function Preview() {
 
     const { navMenu } = useContext(AppState)
     const [openMenu, setOpenMenu] = navMenu
@@ -16,7 +16,7 @@ export default function Contact() {
 
     return (
         <div>
-            <h1>079me</h1>
+            
         </div>
     )
 }

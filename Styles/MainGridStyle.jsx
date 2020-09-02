@@ -18,6 +18,7 @@ const MansoryStyle = styled.div`
 
 .grid-item img {
   width: 100%;
+  margin-bottom: -4px;
 }
 
 }

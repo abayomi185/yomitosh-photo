@@ -1,9 +1,19 @@
-import Layout from './Layout';
-import { useEffect, useContext } from 'react'
+import { useEffect, useContext, useState } from 'react'
 import { AppState } from '../context/AppState'
+import Link from 'next/link'
+import * as styles_var from '../Styles/Variables'
 import MainGridStyle from '../Styles/MainGridStyle'
-// import Masonry, {ResponsiveMasonry} from "react-responsive-masonry"
 import Masonry from 'react-masonry-component'
+
+
+//Experimental------------------
+
+// import MagicGrid from "magic-grid-react"
+
+// import StackGrid from "react-stack-grid"
+
+//---------------------------------
+
 
 //JSON Image data
 import highlights_data from '../public/json/highlights_data.json'
@@ -11,8 +21,11 @@ import highlights_data from '../public/json/highlights_data.json'
 const masonryOptions = {
     transitionDuration: 200,
     itemSelector: '.grid-item',
-    // columnWidth: 200,
+    // columnWidth: 500,
     percentPosition: true,
+    gutter: 0,
+    // fitWidth: true
+    // stagger: 100
 };
 
 export default function Highlights() {
@@ -29,10 +42,22 @@ export default function Highlights() {
     const HighlightsImages = highlights_data.Highlights.map((element, index) => {
         return (
             <div key={index} className="grid-item">
-                <img src={element.image} />
+                <Link href="Preview" image={element.image} altText={element.alt} shallow >
+                    <a>
+                        <img src={element.image} />
+                    </a>
+                </Link>
             </div>
         );
     });
+
+
+    //Experimental-----------
+
+
+
+    //-------------------------
+
 
     return (
         <MainGridStyle>
@@ -40,9 +65,9 @@ export default function Highlights() {
                 className={'grid'}
                 elementType={'div'}
                 options={masonryOptions}
-                // disableImagesLoaded={false} // default false
-                // updateOnEachImageLoad={false} // default false and works only if disableImagesLoaded is false
-                // imagesLoadedOptions={imagesLoadedOptions} // default {}
+            // disableImagesLoaded={false} // default false
+            // updateOnEachImageLoad={false} // default false and works only if disableImagesLoaded is false
+            // imagesLoadedOptions={imagesLoadedOptions} // default {}
             >
                 {HighlightsImages}
             </Masonry>
