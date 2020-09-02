@@ -8,8 +8,6 @@ export default function Layout(props) {
 
   const router = useRouter()
 
-
-
   return (
     <>
 

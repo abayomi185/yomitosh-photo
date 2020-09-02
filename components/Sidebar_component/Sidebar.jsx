@@ -13,10 +13,11 @@ export default function Sidebar() {
     const [openMenu, setOpenMenu] = navMenu
 
     const [scrolled, setScrolled] = useState(false);
+
     const handleScroll = () => {
         const offset = window.scrollY
         const screenWidth = window.innerWidth
-        if ((offset > 75.38) && (screenWidth < styles_var.desktopSizeValue)) {
+        if ((offset > 64.19) && (screenWidth < styles_var.desktopSizeValue)) {
             setScrolled(true);
         }
         else {
@@ -29,12 +30,12 @@ export default function Sidebar() {
         window.addEventListener('resize', handleScroll)
     })
 
-    let stickyNavClass = [];
-    let stickyNavAidClass = [];
+    let stickyNavClass = []
+    let stickyNavAidClass = []
 
     if (scrolled) {
-        stickyNavClass.push('sticky-nav');
-        stickyNavAidClass.push('sticky-nav-aid');
+        stickyNavClass.push('sticky-nav')
+        stickyNavAidClass.push('sticky-nav-aid')
     }
 
     return (

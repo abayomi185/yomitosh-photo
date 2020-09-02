@@ -81,6 +81,11 @@ ul {
   z-index: 0;
   position: relative;
   transform: translateY(0px);
+  padding-top: 0rem;
+}
+
+.sidebar-brand {
+  padding-bottom: 0rem;
 }
 
 .brand-name {
@@ -96,16 +101,17 @@ ul {
 .sidebar-items {
   display: block;
   height: 2.8rem;
+  padding-top: 1rem;
 }
 
 .sticky-nav {
   position: fixed;
-  padding-top: 1rem;
-  /* transition-duration: 0.2s; */
+  /* padding-bottom: 1rem; */
+  transition-duration: 1.2s;
 }
 
 .sticky-nav-aid {
-  /* margin-bottom: 52.8px; */
+  margin-bottom: 68.8px;
 }
 
 .sidebar-burgermenu {
