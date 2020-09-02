@@ -3,11 +3,7 @@ import * as styles_var from '../../Styles/Variables'
 
 const socialIcons = styled.div`
 
-@media only screen and (min-device-width: ${styles_var.mobile}) {
-
-.icons {
-    display: none;
-}
+@media only screen and (min-width: ${styles_var.mobile}) {
 
 .social-icon {
   padding: 0 0.1rem;
@@ -19,13 +15,12 @@ const socialIcons = styled.div`
 
 }
 
-@media only screen and (min-device-width: ${styles_var.tablet}) {  
+@media only screen and (min-width: ${styles_var.tablet}) {  
 
 }
-@media only screen and (min-device-width: ${styles_var.desktop}) {
+@media only screen and (min-width: ${styles_var.desktop}) {
 
 .icons {
-  display: block;
   text-align: center;
   padding-bottom: 0.2rem;
 }

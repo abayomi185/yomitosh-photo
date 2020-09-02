@@ -3,7 +3,7 @@ import * as styles_var from './Variables'
 
 const GlobalStyle = createGlobalStyle`
   
-@media only screen and (min-device-width: ${styles_var.mobile}) {
+@media only screen and (min-width: ${styles_var.mobile}) {
 
 /* 1 column grid */
 
@@ -12,6 +12,7 @@ html, body {
   padding: 0;
   margin: 0;
   background-color: ${styles_var.pink_color};
+  min-height: 100%;
   min-width: 320px;
 }
 
@@ -33,9 +34,21 @@ main {
   height: 100vh;
 }
 
+nav {
+  z-index: 1;
+}
+
+.content-area {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
 #main-content {
   margin-top: 58.23px;
   transition-duration: 0.5s;
+  ${'' /* justify-content: center; */}
+  width: 100%;
 }
 
 .hover-transition {
@@ -60,7 +73,7 @@ h1 {
 
 }
 
-@media only screen and (min-device-width: ${styles_var.tablet}) {
+@media only screen and (min-width: ${styles_var.tablet}) {
 /* Tablet - 2 Column grid */
 
 #main-content {
@@ -71,11 +84,21 @@ h1 {
 
 /* Another possible breakpoint here - at 992px */
 
-@media only screen and (min-device-width: ${styles_var.desktop}) {
+@media only screen and (min-width: ${styles_var.desktop}) {
 /* Desktop */
+
+html, body {
+  min-height: 420px;
+}
+
 main {
   flex-direction: row;
 }
+
+#main-content {
+  margin-left: 240px;
+}
+
 }
 
 `;

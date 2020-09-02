@@ -10,12 +10,13 @@
   "dependencies": {
     "@material-ui/core": "^4.11.0",
     "@material-ui/icons": "^4.9.1",
+    "colcade": "^0.2.0",
     "framer-motion": "^2.6.3",
     "next": "9.3.5",
     "react": "16.13.1",
     "react-dom": "16.13.1",
+    "react-grid-layout": "^1.0.0",
     "react-masonry-component": "^6.2.1",
-    "react-transition-group": "^1.2.1",
     "sass": "^1.26.10",
     "styled-components": "^5.1.1"
   }

@@ -3,7 +3,7 @@ import * as styles_var from '../../Styles/Variables'
 
 const sidebar = styled.div`
 
-@media only screen and (min-device-width: ${styles_var.mobile}) {
+@media only screen and (min-width: ${styles_var.mobile}) {
 
 .sidebar {
   display: flex;
@@ -17,24 +17,17 @@ const sidebar = styled.div`
   display: flex;
   justify-content: space-between;
   background: ${styles_var.white_color};
+  z-index: 1;
 }
 
 .sidebar-items {
   padding-bottom: 0.5rem;
   z-index: -1;
   position: absolute;
+  /* -webkit-transform: translate3d(0, 0, 0); */
   transform: ${({ openMenu }) => openMenu ? 'translateY(58px)' : 'translateY(-200px)' };
   width: 100%;
   background: ${styles_var.white_color};
-  /* visibility: ${({ openMenu }) => openMenu ? 'visible' : 'hidden' }; */
-  /* height: ${({ openMenu }) => openMenu ? '' : '0px' }; */
-  /* transition: height 0.3s; */
-  /* display: ${({ openMenu }) => openMenu ? 'block' : 'none' }; */
-  /* Can you imagine, this is just ES6 syntax to pass create an anonymous function with a destructured openMenu passed */
-
-  /* opacity: ${({ openMenu }) => openMenu ? '1' : '0' };
-  visibility: ${({ openMenu }) => openMenu ? 'visible' : 'hidden' };
-  transition: opacity 600ms, visibility 600ms; */
   transition: 0.4s ease-in-out;
 }
 
@@ -66,25 +59,33 @@ ul {
 }
 
 .sidebar-footer {
-  text-align: center;
-  flex-shrink: 0;
-  margin-bottom: 2rem;
   display: none;
 }
 
+.sidebar-footer-text {
+  text-align: center;
+  flex-shrink: 0;
 }
 
-@media only screen and (min-device-width: ${styles_var.tablet}) {  
+}
+
+@media only screen and (min-width: ${styles_var.tablet}) {  
 
 .sidebar{
-  position: static;
+  position: relative;
+  /* overflow-y: hidden; */
 }
 
 .sidebar-items {
   padding-bottom: 0.5rem;
   z-index: 0;
-  position: static;
+  position: relative;
   transform: translateY(0px);
+  padding-top: 0rem;
+}
+
+.sidebar-brand {
+  padding-bottom: 0rem;
 }
 
 .brand-name {
@@ -95,42 +96,73 @@ ul {
 
 .sidebar-mobile-top {
   justify-content: center;
-  z-index: 1;
 }
 
 .sidebar-items {
   display: block;
+  height: 2.8rem;
+  padding-top: 1rem;
+}
+
+.sticky-nav {
+  position: fixed;
+  /* padding-bottom: 1rem; */
+  transition-duration: 1.2s;
+}
+
+.sticky-nav-aid {
+  margin-bottom: 68.8px;
 }
 
 .sidebar-burgermenu {
   display: none;
 }
 
+ul {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0 12rem;
 }
 
-@media only screen and (min-device-width: ${styles_var.desktop}) {
+}
+
+@media only screen and (min-width: ${styles_var.desktop}) {
 
 .sidebar{
   /* flex-direction: column; */
+  position: fixed;
   width: 240px;
-  height: 100vh;
+  height: 100%;
+  /* transform-style: flat; */
+}
+
+.sidebar-mobile-top {
+  display: block;
 }
 
 .sidebar-brand {
-  padding: 4rem;
+  padding: 4rem 3.9rem;
 }
 
 .sidebar-items {
+  height: auto;
   flex: 1 0 auto;
   padding-bottom: 1rem;
 }
 
 .sidebar-footer {
+  flex-shrink: 0;
+  margin-bottom: 2rem;
   display: block;
 }
 
 .copyright-text {
   font-size: 0.7rem;
+}
+
+ul {
+  display: block;
+  margin: 0;
 }
 
 }

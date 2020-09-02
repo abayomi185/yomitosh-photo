@@ -6,10 +6,15 @@ export const black_color = '#000'
 
 export const pink_color = '#f5deff'
 
-export const grey_color = '#363636'
+export const darkgray_color = '#363636'
 
-export const mobile = '320px'
+export const lightgray_color = '#696969'
 
-export const tablet = '768px'
+export const mobileSizeValue = 200
+export const mobile = `${mobileSizeValue}px`
 
-export const desktop = '1024px'
+export const tabletSizeValue = 768
+export const tablet = `${tabletSizeValue}px`
+
+export const desktopSizeValue = 1024
+export const desktop = `${desktopSizeValue}px`
