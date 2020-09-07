@@ -4,7 +4,7 @@ import { createContext } from 'react'
 import { motion, AnimatePresence } from "framer-motion"
 
 import GlobalStyle from '../Styles/GlobalStyles'
-import Sidebar from '../components/Sidebar_component/Sidebar'
+import Sidebar from '../components/Sidebar'
 import Highlights from './Highlights'
 import Layout from './Layout'
 

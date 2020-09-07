@@ -12,7 +12,7 @@ html, body {
   padding: 0;
   margin: 0;
   background-color: ${styles_var.pink_color};
-  min-height: 100%;
+  ${'' /* min-height: 100%; */}
   min-width: 320px;
 }
 
@@ -31,7 +31,17 @@ body::-webkit-scrollbar-thumb {
 main {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  ${'' /* height: 100vh; */}
+}
+
+nav {
+  z-index: 1;
+}
+
+.content-area {
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 
 nav {

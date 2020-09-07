@@ -12,11 +12,20 @@ export default function Contact() {
         // Always do navigations after the first render
         //router.push('/?counter=10', undefined, { shallow: true })
         setOpenMenu(false)
+<<<<<<< HEAD
       }, [])
 
     return (
             <div>
                 <h1>079me</h1>
             </div>
+=======
+    }, [])
+
+    return (
+        <div>
+            <h1>079me</h1>
+        </div>
+>>>>>>> Refactor/Development
     )
 }

@@ -1,7 +1,24 @@
+import React, { useState } from 'react';
 import styled from 'styled-components';
-import * as styles_var from '../../Styles/Variables'
+import * as styles_var from '../Styles/Variables'
 
-const burgerMenu = styled.button`
+function Burger({openMenu, setOpenMenu}) {
+
+  return (
+    <BurgerMenu_Style open={openMenu} onClick={() => setOpenMenu(!openMenu)}>
+      <div />
+      <div />
+      <div />
+    </BurgerMenu_Style>
+  )
+}
+
+export default Burger;
+
+
+//------------------Styles------------------
+
+const BurgerMenu_Style = styled.button`
   position: absolute;
   top: 1.2rem;
   right: 2rem;
@@ -25,7 +42,7 @@ const burgerMenu = styled.button`
     height: 0.2rem;
     background: ${styles_var.coral_color };
     border-radius: 10px;
-    transition: all 0.3s linear;
+    transition: all 0.2s linear;
     position: relative;
     transform-origin: 1px;
 
@@ -44,5 +61,3 @@ const burgerMenu = styled.button`
 
   }
 `;
-
-export default burgerMenu

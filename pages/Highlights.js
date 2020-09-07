@@ -1,18 +1,24 @@
-import Layout from './Layout';
-import { useEffect, useContext } from 'react'
+import { useEffect, useContext, useState } from 'react'
 import { AppState } from '../context/AppState'
+import Link from 'next/link'
+import * as styles_var from '../Styles/Variables'
 import MainGridStyle from '../Styles/MainGridStyle'
-// import Masonry, {ResponsiveMasonry} from "react-responsive-masonry"
 import Masonry from 'react-masonry-component'
+import { useRouter } from 'next/router'
+import { useScrollPosition } from '@n8tb1t/use-scroll-position'
 
 //JSON Image data
 import highlights_data from '../public/json/highlights_data.json'
 
+
 const masonryOptions = {
     transitionDuration: 200,
     itemSelector: '.grid-item',
-    // columnWidth: 200,
+    // columnWidth: 500,
     percentPosition: true,
+    gutter: 0,
+    // fitWidth: true
+    // stagger: 100
 };
 
 export default function Highlights() {
@@ -20,32 +26,63 @@ export default function Highlights() {
     const { navMenu } = useContext(AppState)
     const [openMenu, setOpenMenu] = navMenu
 
+    const [scrollLocation, setScrollLocation] = useState()
+
+    const router = useRouter()
+
+    function onScroll() {
+
+    }
+
     useEffect(() => {
         // Always do navigations after the first render
         //router.push('/?counter=10', undefined, { shallow: true })
         setOpenMenu(false)
     }, [])
 
+    function push(imageURL, altText) {
+        router.push({
+            pathname: "/Preview",
+            query: { imageURL: imageURL, altText: altText }
+        })
+    }
+
     const HighlightsImages = highlights_data.Highlights.map((element, index) => {
         return (
-            <div key={index} className="grid-item">
+            <div key={index}
+                className="grid-item"
+                onClick={() => push(element.image, element.alt)}
+            >
                 <img src={element.image} />
             </div>
         );
     });
 
+
+    //Experimental-----------
+
+
+
+    //-------------------------
+
+
     return (
         <MainGridStyle>
-            <Masonry
+            {/* <Masonry
                 className={'grid'}
                 elementType={'div'}
                 options={masonryOptions}
-                // disableImagesLoaded={false} // default false
-                // updateOnEachImageLoad={false} // default false and works only if disableImagesLoaded is false
-                // imagesLoadedOptions={imagesLoadedOptions} // default {}
+            // disableImagesLoaded={false} // default false
+            // updateOnEachImageLoad={false} // default false and works only if disableImagesLoaded is false
+            // imagesLoadedOptions={imagesLoadedOptions} // default {}
             >
                 {HighlightsImages}
-            </Masonry>
+            </Masonry> */}
+
+            <div className="flex-grid">
+                {HighlightsImages}
+            </div>
+
         </MainGridStyle>
     )
 }
