@@ -16,7 +16,9 @@ export default function Contact() {
 
     return (
         <div>
-            <h1>079me</h1>
+            {/* <h1>079me</h1> */}
+            <h2>Web development isn't as easy as I thought. Please check this page again soon.</h2>
+            <h1>You can contact me on instagram in the mean time. <a href="instagram.com/yomi185">@Yomi185</a></h1>
         </div>
     )
 }

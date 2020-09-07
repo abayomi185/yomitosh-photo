@@ -18,7 +18,8 @@ export default function Galleries(props) {
     return (
         <AnimatePresence exitBeforeEnter>
             <div>
-                <h1>This is my domain!</h1>
+                {/* <h1>This is my domain!</h1> */}
+                <h1>I'm seems like I'm still developing this page. Please check again soon.</h1>
             </div>
         </AnimatePresence>
     )

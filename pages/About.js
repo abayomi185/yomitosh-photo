@@ -15,7 +15,8 @@ export default function About() {
 
     return (
             <div>
-                <h1>This is About me &#128521;</h1>
+                {/* <h1>This is About me &#128521;</h1> */}
+                <h1>Hmm. This page is also under construction. Please check back soon.</h1>
             </div>
     )
 }
