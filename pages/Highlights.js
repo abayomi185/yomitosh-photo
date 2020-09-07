@@ -5,6 +5,7 @@ import * as styles_var from '../Styles/Variables'
 import MainGridStyle from '../Styles/MainGridStyle'
 import Masonry from 'react-masonry-component'
 import { useRouter } from 'next/router'
+import { useScrollPosition } from '@n8tb1t/use-scroll-position'
 
 //JSON Image data
 import highlights_data from '../public/json/highlights_data.json'
@@ -25,7 +26,13 @@ export default function Highlights() {
     const { navMenu } = useContext(AppState)
     const [openMenu, setOpenMenu] = navMenu
 
+    const [scrollLocation, setScrollLocation] = useState()
+
     const router = useRouter()
+
+    function onScroll() {
+
+    }
 
     useEffect(() => {
         // Always do navigations after the first render
@@ -61,7 +68,7 @@ export default function Highlights() {
 
     return (
         <MainGridStyle>
-            <Masonry
+            {/* <Masonry
                 className={'grid'}
                 elementType={'div'}
                 options={masonryOptions}
@@ -70,7 +77,12 @@ export default function Highlights() {
             // imagesLoadedOptions={imagesLoadedOptions} // default {}
             >
                 {HighlightsImages}
-            </Masonry>
+            </Masonry> */}
+
+            <div className="flex-grid">
+                {HighlightsImages}
+            </div>
+
         </MainGridStyle>
     )
 }

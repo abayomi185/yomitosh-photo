@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import { useRouter, useContext } from 'next/router'
 import { motion, AnimatePresence } from "framer-motion"
-import Sidebar from '../components/Sidebar_component/Sidebar'
+import Sidebar from '../components/Sidebar'
 import { AppState } from '../context/AppState'
 
 export default function Layout(props) {

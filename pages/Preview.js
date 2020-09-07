@@ -33,7 +33,6 @@ export default function Preview(props) {
                 <p className="header">This is a large image view. <a onClick={() => router.back()}>Go Back</a></p>
                 <img src={imageURL} />
                 <p className="caption">{imageCaption}</p>
-                {/* <p>{? : }</p> */}
             </div>
         </PreviewStyle>
     )
@@ -41,7 +40,8 @@ export default function Preview(props) {
 
 
 
-//--------Styles----------
+//------------------Styles------------------
+
 const PreviewStyle = styled.div`
 
 @media only screen and (min-width: ${styles_var.mobile}) {
