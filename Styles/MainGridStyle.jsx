@@ -6,10 +6,10 @@ const MansoryStyle = styled.div`
 @media only screen and (min-width: ${styles_var.mobile}) {
 
 .flex-grid {
-  display: flex;
-  flex-direction: column;
+  /* display: flex;
+  flex-direction: column; */
   /* flex-wrap: wrap; */
-  max-height: 2000px;
+  /* min-height: 10000px; */
 }
 
 .grid {
@@ -38,7 +38,7 @@ const MansoryStyle = styled.div`
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  max-height: 2000px;
+  /* max-height: 2000px; */
 }
 
 .grid-item {

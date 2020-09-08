@@ -6,6 +6,7 @@ import MainGridStyle from '../Styles/MainGridStyle'
 import Masonry from 'react-masonry-component'
 import { useRouter } from 'next/router'
 import { useScrollPosition } from '@n8tb1t/use-scroll-position'
+import Preview from './Preview'
 
 //JSON Image data
 import highlights_data from '../public/json/highlights_data.json'
@@ -23,16 +24,14 @@ const masonryOptions = {
 
 export default function Highlights() {
 
-    const { navMenu } = useContext(AppState)
+    const { navMenu, showPreview } = useContext(AppState)
     const [openMenu, setOpenMenu] = navMenu
 
-    const [scrollLocation, setScrollLocation] = useState()
+    const [openImgPreview, setOpenImgPreview] = showPreview
+
+    let imageKey = 0
 
     const router = useRouter()
-
-    function onScroll() {
-
-    }
 
     useEffect(() => {
         // Always do navigations after the first render
@@ -42,16 +41,21 @@ export default function Highlights() {
 
     function push(imageURL, altText) {
         router.push({
-            pathname: "/Preview",
+            pathname: "/",
             query: { imageURL: imageURL, altText: altText }
-        })
+        }, undefined, { shallow: true })
     }
 
     const HighlightsImages = highlights_data.Highlights.map((element, index) => {
         return (
             <div key={index}
                 className="grid-item"
-                onClick={() => push(element.image, element.alt)}
+                // onClick={() => push(element.image, element.alt)}
+                onClick={()=> {
+                    setOpenImgPreview(!openImgPreview)
+                    push(element.image, element.alt)
+                    //Call another function here
+                }}
             >
                 <img src={element.image} />
             </div>
@@ -82,6 +86,8 @@ export default function Highlights() {
             <div className="flex-grid">
                 {HighlightsImages}
             </div>
+
+            {openImgPreview ? <Preview />: ""}
 
         </MainGridStyle>
     )

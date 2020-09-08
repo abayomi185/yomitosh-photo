@@ -24,7 +24,7 @@ export default function Preview(props) {
         // Always do navigations after the first render
         //router.push('/?counter=10', undefined, { shallow: true })
         setOpenMenu(false)
-        window.scrollTo(0, 0)
+        // window.scrollTo(0, 0)
     }, [])
 
     return (

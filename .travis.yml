@@ -13,5 +13,6 @@ deploy:
   skip_cleanup: true # Prevents Travis from resetting the working directory made during the build
   github_token: $github_token # GitHub access token to use when pushing to the gh-pages branch
   local_dir: out # Directory to push to the gh-pages branch
+  #fqdn: yomitosh.com # This instructs Travis to create a CNAME file with yomitosh.com as the contents on every deployment to the gh-pages branch
   on:
     branch: master # Only deploy when the build is on master branch
