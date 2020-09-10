@@ -7,6 +7,7 @@ import Masonry from 'react-masonry-component'
 import { useRouter } from 'next/router'
 import { useScrollPosition } from '@n8tb1t/use-scroll-position'
 import Preview from './Preview'
+import Masonry2 from 'react-masonry-css'
 
 //JSON Image data
 import highlights_data from '../public/json/highlights_data.json'
@@ -22,6 +23,12 @@ const masonryOptions = {
     // stagger: 100
 };
 
+const breakpointColumnsObj = {
+    [styles_var.tabletSizeValue]: 1
+};
+
+console.log(breakpointColumnsObj);
+
 export default function Highlights() {
 
     const { navMenu, showPreview } = useContext(AppState)
@@ -32,6 +39,8 @@ export default function Highlights() {
     let imageKey = 0
 
     const router = useRouter()
+
+    const currentPath = router.pathname
 
     useEffect(() => {
         // Always do navigations after the first render
@@ -46,15 +55,31 @@ export default function Highlights() {
         }, undefined, { shallow: true })
     }
 
+    function imageClick(image, alt) {
+
+        push(image, alt)
+        setOpenImgPreview(!openImgPreview)
+        goBack()
+    }
+
+    function goBack() {
+        if (openImgPreview == true) {
+            router.push({
+                pathname: currentPath
+            })
+        }
+    }
+
     const HighlightsImages = highlights_data.Highlights.map((element, index) => {
         return (
             <div key={index}
                 className="grid-item"
                 // onClick={() => push(element.image, element.alt)}
-                onClick={()=> {
-                    setOpenImgPreview(!openImgPreview)
-                    push(element.image, element.alt)
+                onClick={() => {
+                    // setOpenImgPreview(!openImgPreview)
+                    // push(element.image, element.alt)
                     //Call another function here
+                    // imageClick(element.image, element.alt)
                 }}
             >
                 <img src={element.image} />
@@ -83,11 +108,25 @@ export default function Highlights() {
                 {HighlightsImages}
             </Masonry> */}
 
-            <div className="flex-grid">
+            <Masonry2
+                breakpointCols={breakpointColumnsObj}
+                className="grid"
+                columnClassName="grid-column"
+            >
                 {HighlightsImages}
+            </Masonry2>
+
+            <div className="grid-container">
+                
+                {/* <div className="flex-grid">
+                    {HighlightsImages}
+                </div> */}
+
+                {/* {openImgPreview ? <Preview backFunc={goBack} /> : <div className="flex-grid">
+                    {HighlightsImages}
+                </div>} */}
             </div>
 
-            {openImgPreview ? <Preview />: ""}
 
         </MainGridStyle>
     )

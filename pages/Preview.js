@@ -8,8 +8,9 @@ import * as styles_var from '../Styles/Variables'
 
 export default function Preview(props) {
 
-    const { navMenu } = useContext(AppState)
+    const { navMenu, showPreview } = useContext(AppState)
     const [openMenu, setOpenMenu] = navMenu
+    const [openImgPreview, setOpenImgPreview] = showPreview
 
     const router = useRouter()
     const { imageURL, altText } = router.query
@@ -27,10 +28,15 @@ export default function Preview(props) {
         // window.scrollTo(0, 0)
     }, [])
 
+    function navigateBack() {
+        setOpenImgPreview(false)
+        props.backFunc()
+    }
+
     return (
         <PreviewStyle>
             <div className="imagePreview">
-                <p className="header">This is a large image view. <a onClick={() => router.back()}>Go Back</a></p>
+                <p className="header">This is a large image view. <a onClick={() => navigateBack()}>Go Back</a></p>
                 <img src={imageURL} />
                 <p className="caption">{imageCaption}</p>
             </div>
@@ -39,17 +45,11 @@ export default function Preview(props) {
 }
 
 
-
 //------------------Styles------------------
 
 const PreviewStyle = styled.div`
 
 @media only screen and (min-width: ${styles_var.mobile}) {
-
-.header {
-    position: fixed;
-    top: 58.3px;
-}
 
 .imagePreview {
     display: flex;
@@ -57,10 +57,25 @@ const PreviewStyle = styled.div`
     justify-content: center;
     width: 100%;
     margin-top: 53px;
+
+    /* background: red;
+    
+    position: fixed; */
+    /* width: 100vw;
+    height: 100vh; */
+    /* position: absolute; */
+    z-index: 1;
+    top: 0px;
+}
+
+.header {
+    position: fixed;
+    top: 58.3px;
 }
 
 img {
     width: 100%;
+    /* max-height: 100%; */
 }
 
 p {
@@ -86,17 +101,23 @@ a:hover {
 
 @media only screen and (min-width: ${styles_var.tablet}) {
 
-.header {
-    position: static;
-}
-
 .imagePreview {
     margin-top: 0px;
+    top: 132.99px;
+}
+
+.header {
+    position: static;
 }
 
 }
 
 @media only screen and (min-width: ${styles_var.desktop}) {
+
+.imagePreview {
+    top: 0px;
+}
+
 }
 
 `;

@@ -1,0 +1,28 @@
+{
+    "galleries": [
+        {
+            "title": "Street",
+            "thumbnail_images": [
+
+            ]
+        },
+        {
+            "title": "Landscape",
+            "thumbnail_images": [
+
+            ]
+        },
+        {
+            "title": "B&W",
+            "thumbnail_images": [
+
+            ]
+        },
+        {
+            "title": "Moody",
+            "thumbnail_images": [
+
+            ]
+        }
+    ]
+}

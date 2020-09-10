@@ -5,21 +5,30 @@ const MansoryStyle = styled.div`
 
 @media only screen and (min-width: ${styles_var.mobile}) {
 
+/* .grid-container {
+  width: 100%;
+} */
+
 .flex-grid {
   /* display: flex;
-  flex-direction: column; */
-  /* flex-wrap: wrap; */
-  /* min-height: 10000px; */
+  flex-direction: column;
+  flex-wrap: wrap; */
+
+  /* display: flex;
+  width: auto; */
 }
 
 .grid {
-  width: 100%;
+  /* width: 100%;
   margin: auto;
   display: flex;
-  justify-content: center;
+  justify-content: center; */
+
+    display: flex;
+    width: auto;
 }
 
-.grid-item {
+/* .grid-item {
   width: 100%;
   display: inline-block;
 }
@@ -27,6 +36,21 @@ const MansoryStyle = styled.div`
 .grid-item img {
   width: 100%;
   margin-bottom: -5px;
+} */
+
+.grid-column {
+    margin: 0;
+}
+
+.grid-item {
+    background: white;
+    margin: 15px;
+}
+
+img {
+    display: block;
+    width: 100%;
+    margin: 0;
 }
 
 }
@@ -34,16 +58,16 @@ const MansoryStyle = styled.div`
 
 @media only screen and (min-width: ${styles_var.tablet}) {
 
-.flex-grid {
+/* .flex-grid {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  /* max-height: 2000px; */
+  max-height: 2100px;
 }
 
 .grid-item {
   width: 50%;
-}
+} */
 
 }
 
