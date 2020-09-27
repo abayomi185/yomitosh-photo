@@ -3,11 +3,9 @@ import { AppState } from '../context/AppState'
 import Link from 'next/link'
 import * as styles_var from '../Styles/Variables'
 import MainGridStyle from '../Styles/MainGridStyle'
-import Masonry from 'react-masonry-component'
 import { useRouter } from 'next/router'
-import { useScrollPosition } from '@n8tb1t/use-scroll-position'
 import Preview from './Preview'
-import Masonry2 from 'react-masonry-css'
+import Masonry from 'react-masonry-css'
 
 //JSON Image data
 import highlights_data from '../public/json/highlights_data.json'
@@ -106,13 +104,13 @@ export default function Highlights() {
                 {HighlightsImages}
             </Masonry> */}
 
-            <Masonry2
+            <Masonry
                 breakpointCols={breakpointColumnsObj}
                 className="grid"
                 columnClassName="grid-column"
             >
                 {HighlightsImages}
-            </Masonry2>
+            </Masonry>
 
             <div className="grid-container">
                 

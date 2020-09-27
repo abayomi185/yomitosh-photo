@@ -9,36 +9,11 @@ function SidebarItem(props) {
 
   let path = props.link
 
-  function oldPathStringCheck() {
-    if (props.link.charAt(props.link.length - 1) == "/") {
-      // console.log(props.link.charAt(props.link.length-1));
-      path = props.link.slice(props.link.length - 1)
-      // console.log(path);
-    }
-  }
-
-  function oldCheckPath() {
-
-    pathStringCheck()
-
-    if ((router.pathname == path) || (router.pathname == path + "Preview")) {
-      return ("active-item")
-    } else {
-      return ""
-    }
-  }
-
-  //   function pathStringCheck() {
-  //     console.log(path);
-  //     path = path.substring(1)
-  //     console.log(path);
-  // }
-
   function checkPath() {
     
     if (router.pathname != "/") {
       path = path.replace("/", "");
-      console.log(path);
+      // console.log(path);
     }
 
     if (router.pathname.includes(path) && (path != "")) {

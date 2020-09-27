@@ -72,7 +72,7 @@ ${'' /* For transition testing purposes */}
 
 h1, h2, h3, h4, h5, h6, p, small {
   font-family: 'Roboto Slab', serif;
-  font-weight: 500;
+  font-weight: 300;
   margin: 0;
   padding: 0;
 }

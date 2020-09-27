@@ -34,10 +34,10 @@ export default function Galleries(props) {
     }, [])
 
     function goToGallery(title) {
-            router.push({
-                // pathname: `${currentPath}/${title}`
-                pathname: `${currentPath}/${title}`
-            })
+        router.push({
+            // pathname: `${currentPath}/${title}`
+            pathname: `${currentPath}/${title}`
+        })
     }
     const Galleries = galleries_data.galleries.map((element, index) => {
         return (
@@ -56,12 +56,12 @@ export default function Galleries(props) {
                 <div className="rectangle">
                     {element.thumbnail_images.map((thumbnail, index) => {
                         return (
-                            <div key={index} className="thumbnail-div" style={{backgroundImage: `url(${thumbnail})`}}>
+                            <div key={index} className="thumbnail-div" style={{ backgroundImage: `url(${thumbnail})` }}>
                                 {/* <img className={`image${index}`} src={thumbnail} /> */}
                             </div>
                         )
                     })}
-                        
+
                 </div>
                 <h1>{element.title}</h1>
             </div>

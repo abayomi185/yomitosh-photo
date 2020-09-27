@@ -3,6 +3,7 @@ import { useEffect, useContext } from 'react'
 import { AppState } from '../context/AppState'
 import styled from 'styled-components'
 import * as styles_var from '../Styles/Variables'
+import AboutMD from './Markdown/About.md'
 
 export default function About() {
 
@@ -18,9 +19,12 @@ export default function About() {
     return (
         <About_Style>
             {/* <h1>This is About me &#128521;</h1> */}
-            <div className="card-div">
-                <div>
-                    <h1>Hmm. This page is also under construction. Please check back soon.</h1>
+            <div className="about">
+                <div className="card-div">
+                    <div>
+                        {/* <h1>Hmm. This page is also under construction. Please check back soon.</h1> */}
+                        <AboutMD />
+                    </div>
                 </div>
             </div>
         </About_Style>
@@ -31,10 +35,30 @@ const About_Style = styled.div`
 
 @media only screen and (min-width: ${styles_var.mobile}) {
 
+a {
+    /* text-decoration: none; */
+    color: blue
+}
+
+p {
+    font-size: 1.1rem;
+}
+
+.about {
+    display: flex;
+    justify-content: center;
+}
+
 .card-div {
     background: ${styles_var.white_color};
+    max-width: 700px;
     margin: 2rem;
     border-radius: 0.5rem;
+    padding: 2rem 1rem;
+}
+
+strong {
+    font-weight: 400;
 }
 
 }
