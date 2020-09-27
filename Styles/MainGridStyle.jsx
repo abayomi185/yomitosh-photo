@@ -9,14 +9,14 @@ const MansoryStyle = styled.div`
   width: 100%;
 } */
 
-.flex-grid {
-  /* display: flex;
+/* .flex-grid {
+  display: flex;
   flex-direction: column;
-  flex-wrap: wrap; */
+  flex-wrap: wrap;
 
-  /* display: flex;
-  width: auto; */
-}
+  display: flex;
+  width: auto;
+} */
 
 .grid {
   /* width: 100%;
@@ -26,6 +26,7 @@ const MansoryStyle = styled.div`
 
     display: flex;
     width: auto;
+    transition: 0.2s;
 }
 
 /* .grid-item {
@@ -43,7 +44,6 @@ const MansoryStyle = styled.div`
 }
 
 .grid-item {
-    background: white;
     margin: 15px;
 }
 
@@ -68,6 +68,11 @@ img {
 .grid-item {
   width: 50%;
 } */
+
+.grid-item {
+    margin: 0;
+}
+
 
 }
 

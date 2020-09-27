@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import Layout from './Layout';
+import { useRouter } from 'next/router'
 import { useEffect, useContext } from 'react'
 import { AppState } from '../context/AppState'
 import { AnimatePresence } from 'framer-motion'
@@ -8,12 +9,13 @@ import * as styles_var from '../Styles/Variables'
 import Masonry from 'react-masonry-css'
 
 //JSON Image data
-import galleries_data from '../public/json/gallery_data.json'
+import galleries_data from '../public/json/gallery_menu.json'
 
 const breakpointColumnsObj = {
-    default: 1,
-    [styles_var.tabletSizeValue]: 2,
-    [styles_var.mobileSizeValue]: 1
+    default: 4,
+    2160: 3,
+    1366: 2,
+    [styles_var.tabletSizeValue]: 1
 };
 
 export default function Galleries(props) {
@@ -21,12 +23,22 @@ export default function Galleries(props) {
     const { navMenu } = useContext(AppState)
     const [openMenu, setOpenMenu] = navMenu
 
+    const router = useRouter()
+
+    const currentPath = router.pathname
+
     useEffect(() => {
         // Always do navigations after the first render
         //router.push('/?counter=10', undefined, { shallow: true })
         setOpenMenu(false)
     }, [])
 
+    function goToGallery(title) {
+            router.push({
+                // pathname: `${currentPath}/${title}`
+                pathname: `${currentPath}/${title}`
+            })
+    }
     const Galleries = galleries_data.galleries.map((element, index) => {
         return (
             <div key={index}
@@ -38,9 +50,19 @@ export default function Galleries(props) {
                     // push(element.image, element.alt)
                     //Call another function here
                     // imageClick(element.image, element.alt)
+                    goToGallery(element.title)
                 }}
             >
-                <div className="rectangle"> </div>
+                <div className="rectangle">
+                    {element.thumbnail_images.map((thumbnail, index) => {
+                        return (
+                            <div key={index} className="thumbnail-div" style={{backgroundImage: `url(${thumbnail})`}}>
+                                {/* <img className={`image${index}`} src={thumbnail} /> */}
+                            </div>
+                        )
+                    })}
+                        
+                </div>
                 <h1>{element.title}</h1>
             </div>
         );
@@ -53,7 +75,7 @@ export default function Galleries(props) {
             {/* <h1>This is my domain!</h1> */}
             {/* <h1>It seems like I'm still developing this page. Please check again soon.</h1> */}
             <Masonry
-                breakpointCols={2}
+                breakpointCols={breakpointColumnsObj}
                 className="gallery-grid"
                 columnClassName="gallery-grid-column"
             >

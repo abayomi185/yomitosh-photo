@@ -3,27 +3,32 @@
         {
             "image": "Images/Highlights/roots-creative.jpg",
             "alt": "Roots Creative LDN  (@RootsCreatives)",
-            "height": ""
+            "description": "",
+            "link": ""
         },
         {
             "image":"Images/Highlights/the-most-beautiful.jpg",
             "alt": "The most beautiful iPhone",
-            "height": ""
+            "description": "",
+            "link": ""
         },
         {
             "image": "Images/Highlights/eyes.jpg",
             "alt": "",
-            "height": ""
+            "description": "",
+            "link": ""        
         },
         {
             "image": "Images/Highlights/lit-tunnel.jpg",
             "alt": "",
-            "height": ""
+            "description": "",
+            "link": ""        
         },
         {
             "image": "Images/Highlights/york-man.jpg",
             "alt": "",
-            "height": ""
+            "description": "",
+            "link": ""
         },
         {
             "image": "Images/Highlights/red-blossoms.jpg",
@@ -33,17 +38,20 @@
         {
             "image": "Images/Highlights/sparkles.jpg",
             "alt": "",
-            "height": ""
+            "description": "",
+            "link": ""
         },
         {
             "image": "Images/Highlights/iphone-close-up.jpg",
             "alt": "Over the Horizon",
-            "height": ""
+            "description": "",
+            "link": ""
         },
         {
             "image": "Images/Highlights/making-it-big.jpg",
             "alt": "",
-            "height": ""
+            "description": "",
+            "link": ""
         }
     ]
 }

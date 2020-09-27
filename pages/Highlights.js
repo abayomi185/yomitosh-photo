@@ -27,8 +27,6 @@ const breakpointColumnsObj = {
     [styles_var.tabletSizeValue]: 1
 };
 
-console.log(breakpointColumnsObj);
-
 export default function Highlights() {
 
     const { navMenu, showPreview } = useContext(AppState)

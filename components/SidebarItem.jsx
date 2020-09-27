@@ -5,42 +5,63 @@ import * as styles_var from '../Styles/Variables'
 
 function SidebarItem(props) {
 
-    const router = useRouter()
+  const router = useRouter()
 
-    let path = props.link
+  let path = props.link
 
-    function pathStringCheck() {
-        if (props.link.charAt(props.link.length-1) == "/") {
-            // console.log(props.link.charAt(props.link.length-1));
-            path = props.link.slice(props.link.length-1)
-            // console.log(path);
-        }
+  function oldPathStringCheck() {
+    if (props.link.charAt(props.link.length - 1) == "/") {
+      // console.log(props.link.charAt(props.link.length-1));
+      path = props.link.slice(props.link.length - 1)
+      // console.log(path);
+    }
+  }
+
+  function oldCheckPath() {
+
+    pathStringCheck()
+
+    if ((router.pathname == path) || (router.pathname == path + "Preview")) {
+      return ("active-item")
+    } else {
+      return ""
+    }
+  }
+
+  //   function pathStringCheck() {
+  //     console.log(path);
+  //     path = path.substring(1)
+  //     console.log(path);
+  // }
+
+  function checkPath() {
+    
+    if (router.pathname != "/") {
+      path = path.replace("/", "");
+      console.log(path);
     }
 
-    function checkPath() {
-
-        pathStringCheck()
-
-        if ((router.pathname == path) || (router.pathname == path + "Preview" )) {
-            return ("active-item")
-        } else {
-            return ""
-        }
+    if (router.pathname.includes(path) && (path != "")) {
+      return ("active-item")
+    } else {
+      return ""
     }
 
-    return (
-        <SidebarItem_Style>
-            <Link href={props.link} shallow >
-                <a>
-                    {/* <li className={`hover-transition ${router.pathname == props.link ? "active-item" : ""}`}> */}
-                    <li className={`hover-transition ${checkPath()}`}>
-                        <p className="sidebar-item">{props.item}</p>
-                        {/* <h2 className="sidebar-item hover-transition"><Link href={props.link}><a>{props.item}</a></Link></h2> */}
-                    </li>
-                </a>
-            </Link>
-        </SidebarItem_Style>
-    )
+  }
+
+  return (
+    <SidebarItem_Style>
+      <Link href={props.link} shallow >
+        <a>
+          {/* <li className={`hover-transition ${router.pathname == props.link ? "active-item" : ""}`}> */}
+          <li className={`hover-transition ${checkPath()}`}>
+            <p className="sidebar-item">{props.item}</p>
+            {/* <h2 className="sidebar-item hover-transition"><Link href={props.link}><a>{props.item}</a></Link></h2> */}
+          </li>
+        </a>
+      </Link>
+    </SidebarItem_Style>
+  )
 }
 
 export default SidebarItem
@@ -100,7 +121,7 @@ li:hover {
 }
 
 p {
-  padding: 7px;
+  padding: 7px 5px;
 }
 
 p:hover {

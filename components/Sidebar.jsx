@@ -57,6 +57,7 @@ export default function Sidebar() {
                     <ul>
                         <SidebarItem item="Highlights" link="/" />
                         <SidebarItem item="Galleries" link="/Galleries" />
+                        <SidebarItem item="Stories" link="/Stories" />
                         <SidebarItem item="About Me" link="/About" route="About" />
                         <SidebarItem item="Contact" link="/Contact" />
                     </ul>
@@ -104,7 +105,7 @@ const Sidebar_Style = styled.div`
   z-index: -1;
   position: absolute;
   /* -webkit-transform: translate3d(0, 0, 0); */
-  transform: ${({ openMenu }) => openMenu ? 'translateY(58px)' : 'translateY(-200px)' };
+  transform: ${({ openMenu }) => openMenu ? 'translateY(58px)' : 'translateY(-250px)' };
   width: 100%;
   background: ${styles_var.white_color};
   transition: 0.4s ease-in-out;
