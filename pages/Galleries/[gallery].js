@@ -145,7 +145,7 @@ export default function Gallery({galleryTitle}) {
 
     }
 
-// eslint-disable-next-line
+    
     const GalleryImages = galleries_data.galleries.[galleryTitle].images.map((image, index) => {
         return (
             <div key={index}

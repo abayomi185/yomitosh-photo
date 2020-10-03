@@ -2,6 +2,7 @@
     "galleries": {
 
         "Street": {
+            "title": "Street",
             "thumbnail_images": [
                 "/Images/Galleries/Street/museum-thumbnail.jpg",
                 "/Images/Galleries/Street/station-man-thumbnail.jpg",
@@ -17,6 +18,7 @@
         },
 
         "Landscape": {
+            "title": "Landscape",
             "thumbnail_images": [
                 "/Images/Galleries/Landscape/hasselblad-thumbnail.jpg",
                 "/Images/Galleries/Landscape/old-skool-photo-thumbnail.jpg",
@@ -29,6 +31,7 @@
         },
 
         "BnW": {
+            "title": "B&W",
             "thumbnail_images": [
                 "/Images/Galleries/BnW/still-thumbnail.jpg",
                 "/Images/Galleries/BnW/chic-thumbnail.jpg",
@@ -41,6 +44,7 @@
         },
 
         "Moody": {
+            "title": "Moody",
             "thumbnail_images": [
                 "/Images/Highlights/eyes-thumbnail.jpg",
                 "/Images/Highlights/roots-creative-thumbnail.jpg",

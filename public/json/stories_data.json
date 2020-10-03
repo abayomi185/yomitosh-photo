@@ -1,0 +1,38 @@
+{
+    "stories": {
+
+        "崔萌": {
+            "title": "崔萌",
+            "config": "single",
+            "layout": "column",
+            "thumbnail_images": [
+                "/Images/Stories/崔萌/jessi-thumbnail.jpg"
+            ],
+            "images": [
+                "/Images/Stories/崔萌/jessi.jpg",
+                "/Images/Galleries/Street/museum.jpg",
+                "/Images/Galleries/Street/station-man.jpg"
+            ]
+        },
+
+        "CarsnBurgers": {
+            "title": "Cars n Burgers",
+            "config": "multiple",
+            "layout": "grid",
+            "thumbnail_images": [
+                "/Images/Galleries/Landscape/hasselblad-thumbnail.jpg",
+                "/Images/Galleries/Landscape/old-skool-photo-thumbnail.jpg",
+                "/Images/Galleries/Landscape/sheep-exclaimed-thumbnail.jpg",
+                "/Images/Galleries/Landscape/views-thumbnail.jpg"
+            ],
+            "images": [
+                "/Images/Galleries/Street/museum.jpg",
+                "/Images/Galleries/Street/station-man.jpg",
+                "/Images/Galleries/Street/shiny-globe.jpg",
+                "/Images/Galleries/Street/cozy-salon.jpg"
+            ]
+        }
+
+    }
+
+}

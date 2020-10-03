@@ -64,6 +64,15 @@ h1 {
     
 }
 
+.thumbnail-div-single {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center center;
+    margin: 0;
+}
+
 img {
     display: block;
     image-orientation: from-image;

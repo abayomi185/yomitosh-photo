@@ -43,9 +43,21 @@ const MansoryStyle = styled.div`
     margin: 0;
 }
 
+.grid-column-single {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .grid-item {
     margin: 15px;
 }
+
+.grid-item-single {
+    margin: 15px;
+}
+
 
 img {
     display: block;
@@ -71,6 +83,16 @@ img {
 
 .grid-item {
     margin: 0;
+}
+
+.grid-item-single {
+    margin: 7px;
+    max-width: 500px;
+
+img {
+    border-radius: 0.5rem;
+}
+
 }
 
 

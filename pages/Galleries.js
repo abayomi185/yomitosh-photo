@@ -25,7 +25,6 @@ export default function Galleries(props) {
     const [openMenu, setOpenMenu] = navMenu
 
     const router = useRouter()
-
     const currentPath = router.pathname
 
     useEffect(() => {
@@ -68,7 +67,7 @@ export default function Galleries(props) {
                     })}
 
                 </div>
-                <h1 className="hover-transition">{key}</h1>
+                <h1 className="hover-transition">{value.title}</h1>
             </div>
         );
     });
