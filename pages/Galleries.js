@@ -9,7 +9,8 @@ import * as styles_var from '../Styles/Variables'
 import Masonry from 'react-masonry-css'
 
 //JSON Image data
-import galleries_data from '../public/json/gallery_menu.json'
+import galleries_data from '../public/json/galleries_data.json'
+import galleries_data2 from '../public/json/old_galleries_data.json'
 
 const breakpointColumnsObj = {
     default: 4,
@@ -35,13 +36,17 @@ export default function Galleries(props) {
 
     function goToGallery(title) {
         router.push({
-            // pathname: `${currentPath}/${title}`
-            pathname: `${currentPath}/${title}`
+            pathname: `${currentPath}/${title}`,
+            // pathname: `${currentPath}/Gallery`,
+            // query: {title: title}
         })
     }
-    const Galleries = galleries_data.galleries.map((element, index) => {
+
+    const Galleries = Object.entries(galleries_data.galleries).map(([key, value]) => {
+        // console.log(key);
+        // console.log(value.thumbnail_images);
         return (
-            <div key={index}
+            <div key={key}
                 // className="grid-item"
                 className="gallery-item"
                 // onClick={() => push(element.image, element.alt)}
@@ -50,11 +55,11 @@ export default function Galleries(props) {
                     // push(element.image, element.alt)
                     //Call another function here
                     // imageClick(element.image, element.alt)
-                    goToGallery(element.title)
+                    goToGallery(key)
                 }}
             >
                 <div className="rectangle">
-                    {element.thumbnail_images.map((thumbnail, index) => {
+                    {value.thumbnail_images.map((thumbnail, index) => {
                         return (
                             <div key={index} className="thumbnail-div" style={{ backgroundImage: `url(${thumbnail})` }}>
                                 {/* <img className={`image${index}`} src={thumbnail} /> */}
@@ -63,11 +68,10 @@ export default function Galleries(props) {
                     })}
 
                 </div>
-                <h1>{element.title}</h1>
+                <h1 className="hover-transition">{key}</h1>
             </div>
         );
     });
-
 
     return (
 

@@ -13,6 +13,7 @@
     "@material-ui/icons": "^4.9.1",
     "@mdx-js/loader": "^1.6.18",
     "@next/mdx": "^9.5.3",
+    "formik": "^2.1.5",
     "framer-motion": "^2.6.3",
     "next": "9.3.5",
     "react": "16.13.1",

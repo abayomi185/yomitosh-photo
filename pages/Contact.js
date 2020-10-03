@@ -113,6 +113,7 @@ export default function Contact() {
                                     color="primary"
                                     endIcon={<SendIcon />}
                                     style={{ backgroundColor: styles_var.black_color }}
+                                    type="submit"
                                 >
                                     Send
                                 </Button>
@@ -154,7 +155,7 @@ p {
     background: ${styles_var.white_color};
     width: 700px;
     max-width: 700px;
-    margin: 2rem;
+    margin: 2rem 1rem;
     border-radius: 0.5rem;
     padding: 2rem 1rem;
     display: flex;
@@ -178,7 +179,7 @@ p {
 }
 
 .social:hover {
-    background: #e8e8e8;
+    background: ${styles_var.gray_highlight};
     color: ${styles_var.coral_color} !important;
 
 .icon-class {
@@ -189,12 +190,12 @@ p {
 
 .icon-class {
     padding: 0 0.1rem;
-  margin-top: 5px;
+    margin-top: 5px;
 }
 
 .form {
     margin: auto;
-    margin-top: 1.3rem;
+    margin-top: 0.7rem;
     width: 210px;
 }
 

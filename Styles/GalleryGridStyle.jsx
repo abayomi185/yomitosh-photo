@@ -31,6 +31,12 @@ h1 {
     cursor: pointer;
 }
 
+.gallery-item:hover {
+    h1 {
+        color: ${styles_var.coral_color};
+    }
+}
+
 .gallery-item:active {
   /* background-color: #3e8e41; */
   box-shadow: 0 2px 10px grey;

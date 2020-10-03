@@ -37,7 +37,7 @@ const About_Style = styled.div`
 
 a {
     /* text-decoration: none; */
-    color: blue
+    color: #156596;
 }
 
 p {
@@ -52,7 +52,7 @@ p {
 .card-div {
     background: ${styles_var.white_color};
     max-width: 700px;
-    margin: 2rem;
+    margin: 1rem 1rem;
     border-radius: 0.5rem;
     padding: 2rem 1rem;
 }
@@ -70,6 +70,7 @@ strong {
 }
 
 @media only screen and (min-width: ${styles_var.desktop}) {
+
 
 
 

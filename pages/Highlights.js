@@ -22,6 +22,8 @@ const masonryOptions = {
 };
 
 const breakpointColumnsObj = {
+    default: 3,
+    2160: 2,
     [styles_var.tabletSizeValue]: 1
 };
 

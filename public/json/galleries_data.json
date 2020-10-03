@@ -1,17 +1,56 @@
 {
-    "Street": [
+    "galleries": {
 
-    ],
-    
-    "Landscape": [
+        "Street": {
+            "thumbnail_images": [
+                "/Images/Galleries/Street/museum-thumbnail.jpg",
+                "/Images/Galleries/Street/station-man-thumbnail.jpg",
+                "/Images/Galleries/Street/shiny-globe-thumbnail.jpg",
+                "/Images/Galleries/Street/cozy-salon-thumbnail.jpg"
+            ],
+            "images": [
+                "/Images/Galleries/Street/museum.jpg",
+                "/Images/Galleries/Street/station-man.jpg",
+                "/Images/Galleries/Street/shiny-globe.jpg",
+                "/Images/Galleries/Street/cozy-salon.jpg"
+            ]
+        },
 
-    ],
+        "Landscape": {
+            "thumbnail_images": [
+                "/Images/Galleries/Landscape/hasselblad-thumbnail.jpg",
+                "/Images/Galleries/Landscape/old-skool-photo-thumbnail.jpg",
+                "/Images/Galleries/Landscape/sheep-exclaimed-thumbnail.jpg",
+                "/Images/Galleries/Landscape/views-thumbnail.jpg"
+            ],
+            "images": [
+                
+            ]
+        },
 
-    "BnW": [
+        "BnW": {
+            "thumbnail_images": [
+                "/Images/Galleries/BnW/still-thumbnail.jpg",
+                "/Images/Galleries/BnW/chic-thumbnail.jpg",
+                "/Images/Galleries/BnW/long-journey-thumbnail.jpg",
+                "/Images/Galleries/BnW/victoria-bus-thumbnail.jpg"
+            ],
+            "images": [
+                
+            ]
+        },
 
-    ],
+        "Moody": {
+            "thumbnail_images": [
+                "/Images/Highlights/eyes-thumbnail.jpg",
+                "/Images/Highlights/roots-creative-thumbnail.jpg",
+                "/Images/Highlights/eyes-thumbnail.jpg",
+                "/Images/Highlights/roots-creative-thumbnail.jpg"
+            ],
+            "images": [
+                
+            ]
+        }
+    }
 
-    "Moody": [
-        
-    ]
 }

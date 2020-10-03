@@ -81,6 +81,10 @@ h1 {
   font-size: 2.5rem;
 }
 
+img {
+  border-radius: 0.5rem;
+}
+
 }
 
 @media only screen and (min-width: ${styles_var.tablet}) {
@@ -88,6 +92,10 @@ h1 {
 
 #main-content {
   margin-top: 0px;
+}
+
+img {
+  border-radius: 0rem;
 }
 
 }
@@ -107,6 +115,10 @@ main {
 
 #main-content {
   margin-left: 240px;
+}
+
+img {
+  border-radius: 0rem;
 }
 
 }
