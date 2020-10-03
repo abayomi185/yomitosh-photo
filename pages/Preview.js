@@ -8,40 +8,40 @@ import * as styles_var from '../Styles/Variables'
 
 export default function Preview(props) {
 
-    const { navMenu, showPreview } = useContext(AppState)
-    const [openMenu, setOpenMenu] = navMenu
-    const [openImgPreview, setOpenImgPreview] = showPreview
+  const { navMenu, showPreview } = useContext(AppState)
+  const [openMenu, setOpenMenu] = navMenu
+  const [openImgPreview, setOpenImgPreview] = showPreview
 
-    const router = useRouter()
-    const { imageURL, altText } = router.query
+  const router = useRouter()
+  const { imageURL, altText } = router.query
 
-    // console.log(router.query);
+  // console.log(router.query);
 
-    if (altText != "") {
-        var imageCaption = altText
-    }
+  if (altText != "") {
+    var imageCaption = altText
+  }
 
-    useEffect(() => {
-        // Always do navigations after the first render
-        //router.push('/?counter=10', undefined, { shallow: true })
-        setOpenMenu(false)
-        // window.scrollTo(0, 0)
-    }, [])
+  useEffect(() => {
+    // Always do navigations after the first render
+    //router.push('/?counter=10', undefined, { shallow: true })
+    setOpenMenu(false)
+    // window.scrollTo(0, 0)
+  }, [])
 
-    function navigateBack() {
-        setOpenImgPreview(false)
-        props.backFunc()
-    }
+  function navigateBack() {
+    setOpenImgPreview(false)
+    props.backFunc()
+  }
 
-    return (
-        <PreviewStyle>
-            <div className="imagePreview">
-                <p className="header">This is a large image view. <a onClick={() => navigateBack()}>Go Back</a></p>
-                <img src={imageURL} />
-                <p className="caption">{imageCaption}</p>
-            </div>
-        </PreviewStyle>
-    )
+  return (
+    <PreviewStyle>
+      <div className="imagePreview">
+        <p className="header">This is a large image view. <a onClick={() => navigateBack()}>Go Back</a></p>
+        <img src={imageURL} />
+        <p className="caption">{imageCaption}</p>
+      </div>
+    </PreviewStyle>
+  )
 }
 
 

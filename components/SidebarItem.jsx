@@ -126,7 +126,7 @@ li:hover {
 }
 
 p {
-  font-size: 1rem;
+  /* font-size: 1rem; */
   padding: 2.5% 0 2.5% 20%;
   color: ${styles_var.black_color};
   text-align: left;

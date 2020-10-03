@@ -1,6 +1,6 @@
 <p style={{ textAlign: "center"}}><strong>Hi</strong></p>
 <br />
-<div style={{ textAlign: "center" }}>
+<div style={{ textAlign: "center", height: '200px' }}>
     <img style={{ width: '200px', borderRadius: "50%" }} src="/Images/About/kono_yomi_da.jpg" alt=""/>
 </div>
 <br />
@@ -21,8 +21,8 @@
 * <p><strong>Mobile Applications</strong> (Swift, React Native)</p>
 
 <br />
-<p>I hope you like my photos. If you're interested in the techy things I do, check out <a href="https://yomis.blog">Yomis.blog</a></p>
+<p>I hope you like my photos. If you're interested in the techy things I do, check out <strong><a href="https://yomis.blog">Yomis.blog</a></strong></p>
 
 <br />
 <p>Oh yes, <strong>I would love to chat</strong>.</p><br />
-<p>You can drop me a message with <strong>links on the contact page</strong>. I'm open for <strong>bookings</strong> too.</p>
+<p>You can drop me a message with the <strong>links on the contact page</strong>. I'm open for <strong>bookings</strong> too.</p>

@@ -1,16 +1,29 @@
 import Head from 'next/head'
 import { useRouter, useContext } from 'next/router'
-import { motion, AnimatePresence } from "framer-motion"
+import { motion } from "framer-motion"
 import Sidebar from '../components/Sidebar'
 import { AppState } from '../context/AppState'
+
+const mainVariant = {
+  initial: {
+    y: 100,
+    opacity: 0,
+    scale: 0.9,
+    transition: { ease: "easeOut", duration: 0.3 }
+  },
+  enter: {
+    y: 0,
+    opacity: 1,
+    scale: 1,
+    transition: { ease: "easeOut", duration: 0.5 }
+  }
+};
 
 export default function Layout(props) {
 
   const router = useRouter()
 
   return (
-    <>
-
       <div className="container">
         <Head>
           <title>Y O M I .</title>
@@ -25,15 +38,16 @@ export default function Layout(props) {
           </nav>
 
           <div className="content-area">
-            <motion.div id="main-content" exit={{ opacity: 0 }} transition={{ duration: 2 }}>
-              {/* <h1>This is main and this is main two and this is main three</h1> */}
-              {/* {router.pathname == "/" && <Highlights />} */}
+            {/* <div id="main-content" exit={{ opacity: 0 }} transition={{ duration: 2 }}> */}
+            <div
+              id="main-content"
+              // key={router.route}
+            >
               {props.children}
-            </motion.div>
+            </div>
           </div>
 
         </main>
       </div>
-    </>
   )
 }

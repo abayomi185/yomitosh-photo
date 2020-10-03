@@ -22,8 +22,8 @@ export const desktopSizeValue = 1024
 export const desktop = `${desktopSizeValue}px`
 
 export const galleries = {
-    street: "Street",
-    landscape: "Landscape",
-    BlacknWhite: "BnW",
-    Moody: "Moody"
+  street: "Street",
+  landscape: "Landscape",
+  BlacknWhite: "BnW",
+  Moody: "Moody"
 }

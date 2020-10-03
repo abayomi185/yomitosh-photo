@@ -13,18 +13,20 @@
     "@material-ui/icons": "^4.9.1",
     "@mdx-js/loader": "^1.6.18",
     "@next/mdx": "^9.5.3",
-    "formik": "^2.1.5",
-    "framer-motion": "^2.6.3",
+    "formik": "^2.1.7",
+    "framer-motion": "^2.7.7",
     "next": "9.3.5",
     "react": "16.13.1",
     "react-dom": "16.13.1",
-    "react-grid-layout": "^1.0.0",
+    "react-grid-layout": "^1.1.1",
     "react-masonry-css": "^1.0.14",
     "remark-align": "^1.2.13",
     "remark-emoji": "^2.1.0",
     "remark-images": "^2.0.0",
-    "sass": "^1.26.10",
+    "sass": "^1.26.11",
     "styled-components": "^5.1.1"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "@babel/core": "^7.11.6"
+  }
 }

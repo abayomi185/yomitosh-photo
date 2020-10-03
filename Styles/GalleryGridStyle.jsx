@@ -29,9 +29,16 @@ h1 {
     box-shadow: 0 7px 10px grey;
     transition: 0.2s;
     cursor: pointer;
+
+    border: none;
+    width: calc(100% - 30px);
+    padding: 0;
 }
 
 .gallery-item:hover {
+
+    transform: scale(0.97);
+
     h1 {
         color: ${styles_var.coral_color};
     }
@@ -43,6 +50,7 @@ h1 {
   transform: translateY(5px);
   transition: 0.2s;
   user-select: none;
+  transform: scale(0.97);
 }
 
 .rectangle {
