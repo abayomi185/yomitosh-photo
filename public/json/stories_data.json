@@ -1,6 +1,6 @@
 {
   "stories": {
-    "崔萌": {
+    "Jessi": {
       "title": "崔萌",
       "thumbs": "single",
       "layout": "column",
@@ -85,23 +85,23 @@
       "layout": "column",
       "description": "",
       "thumbnail_images": [
-        "/Images/Stories/Cars-n-Burgers/bmw-2002-rear-thumbnail.jpg"
+        "/Images/Stories/cars-n-burgers/bmw-2002-rear-thumbnail.jpg"
       ],
       "images": [
         {
-          "image": "/Images/Stories/Cars-n-Burgers/chevy.jpg",
+          "image": "/Images/Stories/cars-n-burgers/chevy.jpg",
           "alt": ""
         },
         {
-          "image": "/Images/Stories/Cars-n-Burgers/chevy-ornament.jpg",
+          "image": "/Images/Stories/cars-n-burgers/chevy-ornament.jpg",
           "alt": ""
         },
         {
-          "image": "/Images/Stories/Cars-n-Burgers/bmw-2002-rear.jpg",
+          "image": "/Images/Stories/cars-n-burgers/bmw-2002-rear.jpg",
           "alt": ""
         },
         {
-          "image": "/Images/Stories/Cars-n-Burgers/bmw-2002-side.jpg",
+          "image": "/Images/Stories/cars-n-burgers/bmw-2002-side.jpg",
           "alt": ""
         }
       ]

@@ -112,6 +112,8 @@ strong {
   border-radius: 0.5rem;
 }
 
+}
+
 .animations {
   display: inline-block;
   padding: 0.1rem 1rem;
@@ -126,18 +128,14 @@ p {
 
 }
 
-
 }
 
 @media only screen and (min-width: ${styles_var.tablet}) {  
 
 
-
 }
 
 @media only screen and (min-width: ${styles_var.desktop}) {
-
-
 
 
 }
