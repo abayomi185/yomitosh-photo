@@ -32,7 +32,7 @@ function SidebarItem(props) {
 
   return (
     <SidebarItem_Style>
-      <Link href={props.link} shallow >
+      <Link href={props.link} >
         <a>
         {/* <div 
           onClick={changeRoute}    

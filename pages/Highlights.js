@@ -63,7 +63,7 @@ export default function Highlights() {
     router.push({
       pathname: "/",
       query: { imageURL: imageURL, altText: altText }
-    }, undefined, { shallow: true })
+    }, undefined, { shallow: false })
   }
 
   function imageClick(image, alt) {

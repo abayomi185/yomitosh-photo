@@ -48,7 +48,7 @@ export default function CollectionView() {
         router.push({
             pathname: "/",
             query: { imageURL: imageURL, altText: altText }
-        }, undefined, { shallow: true })
+        }, undefined, { shallow: false })
     }
 
     function imageClick(image, alt) {

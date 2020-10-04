@@ -49,7 +49,7 @@ export default function Stories(props) {
   }, [])
 
   function goToGallery(title) {
-    router.push(`${currentPath}/[story]`, `${currentPath}/${title}`, {shallow: true})
+    router.push(`${currentPath}/[story]`, `${currentPath}/${title}`, {shallow: false})
   }
 
   const Stories = Object.entries(stories_data.stories).map(([key, value]) => {
