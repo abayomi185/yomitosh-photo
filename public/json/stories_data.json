@@ -85,23 +85,23 @@
       "layout": "column",
       "description": "",
       "thumbnail_images": [
-        "/Images/Stories/cars-n-burgers/bmw-2002-rear-thumbnail.jpg"
+        "/Images/Stories/CarsBurgers/bmw-2002-rear-thumbnail.jpg"
       ],
       "images": [
         {
-          "image": "/Images/Stories/cars-n-burgers/chevy.jpg",
+          "image": "/Images/Stories/CarsBurgers/chevy.jpg",
           "alt": ""
         },
         {
-          "image": "/Images/Stories/cars-n-burgers/chevy-ornament.jpg",
+          "image": "/Images/Stories/CarsBurgers/chevy-ornament.jpg",
           "alt": ""
         },
         {
-          "image": "/Images/Stories/cars-n-burgers/bmw-2002-rear.jpg",
+          "image": "/Images/Stories/CarsBurgers/bmw-2002-rear.jpg",
           "alt": ""
         },
         {
-          "image": "/Images/Stories/cars-n-burgers/bmw-2002-side.jpg",
+          "image": "/Images/Stories/CarsBurgers/bmw-2002-side.jpg",
           "alt": ""
         }
       ]

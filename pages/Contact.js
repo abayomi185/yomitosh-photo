@@ -139,7 +139,7 @@ export default function Contact() {
                       type="submit"
                     >
                       Send
-                                </Button>
+                    </Button>
 
                   </div>
                 </div>
@@ -240,8 +240,8 @@ p {
 
 @media only screen and (min-width: ${styles_var.desktop}) {
 
-  .card-div {
-    margin: 2rem 1rem;
+.card-div {
+  margin: 2rem 1rem;
 }
 
 }
