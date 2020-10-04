@@ -100,6 +100,10 @@ img {
 
 @media only screen and (min-width: ${styles_var.desktop}) {
 
+  .grid-item-single {
+    max-width: 700px;
+  }
+  
 }
 
 `;

@@ -269,7 +269,7 @@ const Gallery_Style = styled.div`
 }
 
 .content {
-  margin-top: 44px;
+  margin-top: 0;
 }
 
 .gallery-button {
@@ -366,7 +366,7 @@ p {
 }
 
 .grid {
-    margin-top: 60px;
+    margin-top: 0;
 }
 
 p {

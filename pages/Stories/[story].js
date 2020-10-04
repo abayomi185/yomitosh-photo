@@ -215,7 +215,7 @@ export default function Story({ storyTitle, storyStyle, storyLayout }) {
           <ArrowBackIcon className="button-area" style={arrowButtonState("left")} />
         </button>
         <div>
-          <p>{storyTitle}</p>
+          <p>{stories_data.stories.[storyTitle].title}</p>
         </div>
         <button
           className="gallery-button"
@@ -270,7 +270,7 @@ const Gallery_Style = styled.div`
 }
 
 .content {
-  margin-top: 44px;
+  margin-top: 0;
 }
 
 .gallery-button {
@@ -302,6 +302,7 @@ const Gallery_Style = styled.div`
 
 .description {
     background-color: ${styles_var.white_color};
+    margin-top: 36px;
 
 p {
     font-size: 0.9rem;
@@ -339,6 +340,10 @@ p {
   margin-top: 0;
 }
 
+.description {
+    margin-top: 0;
+}
+
 .sticky-nav {
   position: fixed;
   /* padding-bottom: 1rem; */
@@ -366,8 +371,17 @@ p {
     width: calc(100% - 240px);
 }
 
-.grid {
+.description {
     margin-top: 60px;
+
+p {
+    font-size: 0.9rem;
+}
+
+}
+
+.grid {
+    margin-top: 0;
 }
 
 p {
