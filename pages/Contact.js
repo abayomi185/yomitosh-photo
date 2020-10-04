@@ -159,7 +159,7 @@ const Contact_Style = styled.div`
 
 a {
     text-decoration: none;
-    color: black
+    color: black;
 }
 
 p {
@@ -222,18 +222,17 @@ p {
 
 .form-input-div {
     margin: 1rem 0;
-    width: 100%
+    width: 100%;
 }
 
 .form-button {
     margin: 1rem 0;
-    width: 100%
+    width: 100%;
 }
 
 }
 
 @media only screen and (min-width: ${styles_var.tablet}) {
-
 
 
 }

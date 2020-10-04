@@ -128,8 +128,6 @@ p {
 
 }
 
-}
-
 @media only screen and (min-width: ${styles_var.tablet}) {  
 
 
@@ -139,4 +137,5 @@ p {
 
 
 }
+
 `;
