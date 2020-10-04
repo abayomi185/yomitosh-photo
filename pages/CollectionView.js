@@ -5,7 +5,6 @@ import * as styles_var from '../Styles/Variables'
 import MainGridStyle from '../Styles/MainGridStyle'
 import Masonry from 'react-masonry-component'
 import { useRouter } from 'next/router'
-import { useScrollPosition } from '@n8tb1t/use-scroll-position'
 import Preview from './Preview'
 import Masonry2 from 'react-masonry-css'
 
