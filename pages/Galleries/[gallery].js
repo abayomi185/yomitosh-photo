@@ -50,6 +50,10 @@ const breakpointColumnsObj = {
   [styles_var.tabletSizeValue]: 1
 };
 
+const singleBreakpoint = {
+  default: 1
+};
+
 const mainVariant = {
   initial: {
     y: 100,
@@ -63,15 +67,27 @@ const mainVariant = {
     scale: 1,
     transition: { ease: "easeOut", duration: 0.5 }
   }
-};
+}
+
+const subVariant = {
+  initial: {
+    opacity: 0,
+    transition: { ease: "easeOut", duration: 0.3 }
+  },
+  enter: {
+    opacity: 1,
+    transition: { ease: "easeOut", duration: 0.5 }
+  }
+}
 
 const width = 800;
 let widthinpx = `${width}px`
 
 export default function Gallery({ galleryTitle, galleryStyle, galleryLayout }) {
 
-  const { navMenu } = useContext(AppState)
+  const { navMenu, showAnimations } = useContext(AppState)
   const [openMenu, setOpenMenu] = navMenu
+  const [toggleAnimate, setAnimate] = showAnimations
 
   const router = useRouter()
 
@@ -85,7 +101,7 @@ export default function Gallery({ galleryTitle, galleryStyle, galleryLayout }) {
 
     if ((offset > 1) && (screenWidth < styles_var.tabletSizeValue)) {
       setScrolled(true);
-    } else if ((offset > 68) && (screenWidth < styles_var.desktopSizeValue)) {
+    } else if ((offset > 113) && (screenWidth < styles_var.desktopSizeValue)) {
       setScrolled(true);
     } else {
       setScrolled(false);
@@ -153,24 +169,20 @@ export default function Gallery({ galleryTitle, galleryStyle, galleryLayout }) {
     const indexCheck = galleryPathCheck()
 
     if ((direction == "right") && (indexCheck[0] != "end")) {
-      router.push({
-        pathname: `/Galleries/${paths[(indexCheck[1] + 1)]}`
-      })
+      router.push(`/Galleries/[gallery]`, `/Galleries/${paths[(indexCheck[1] + 1)]}`, {shallow: false})
     } else if ((direction == "left") && (indexCheck[0] != "start")) {
-      router.push({
-        pathname: `/Galleries/${paths[(indexCheck[1] - 1)]}`
-      })
+      router.push(`/Galleries/[gallery]`, `/Galleries/${paths[(indexCheck[1] - 1)]}`, {shallow: false})
     } else {
-      console.log("click");
+      // console.log("click");
     }
 
   }
 
 
-  const GalleryImages = galleries_data.galleries.[galleryTitle].images.map((image, index) => {
+  const GalleryImages = galleries_data.galleries.[galleryTitle].images.map((imageData, index) => {
     return (
       <div key={index}
-        className="grid-item"
+        className={galleryLayout == "column" ? "grid-item-single" : "grid-item"}
         // onClick={() => push(element.image, element.alt)}
         onClick={() => {
           // setOpenImgPreview(!openImgPreview)
@@ -179,7 +191,7 @@ export default function Gallery({ galleryTitle, galleryStyle, galleryLayout }) {
           // imageClick(element.image, element.alt)
         }}
       >
-        <img src={image} />
+        <img src={imageData.image} alt={imageData.alt} />
       </div>
     );
   });
@@ -187,7 +199,14 @@ export default function Gallery({ galleryTitle, galleryStyle, galleryLayout }) {
   return (
     <Gallery_Style>
       {/* <h1>079me</h1> */}
-      <div className={`gallery-header ${stickyNavClass}`} initial={false}>
+      
+      <motion.div
+        className={`gallery-header ${stickyNavClass}`}
+        variants={subVariant}
+        initial="initial"
+        animate="enter"
+        exit="initial"
+      >
         <button
           className="gallery-button"
           onClick={(e) => goToGalleryButton(e, "left")}
@@ -203,19 +222,28 @@ export default function Gallery({ galleryTitle, galleryStyle, galleryLayout }) {
         >
           <ArrowForwardIcon className="button-area" style={arrowButtonState("right")} />
         </button>
+      </motion.div>
+
+      <div className="description">
+        {galleries_data.galleries.[galleryTitle].description == "" ?
+          ""
+          :
+          <p>{galleries_data.galleries.[galleryTitle].description}</p>
+        }
+
       </div>
 
       <motion.div
-        variants={mainVariant}
+        variants={toggleAnimate ? mainVariant : null}
         initial="initial"
         animate="enter"
         exit="initial"
       >
-        <MainGridStyle className={`${stickyNavAidClass}`}>
+        <MainGridStyle className={`${stickyNavAidClass} content`}>
           <Masonry
-            breakpointCols={breakpointColumnsObj}
+            breakpointCols={galleryLayout == "column" ? singleBreakpoint : breakpointColumnsObj}
             className="grid"
-            columnClassName="grid-column"
+            columnClassName={galleryLayout == "column" ? "grid-column-single" : "grid-column"}
           >
             {GalleryImages}
           </Masonry>
@@ -235,8 +263,13 @@ const Gallery_Style = styled.div`
     display: flex;
     justify-content: center;
     width: 100%;
-    position: relative;
+    position: fixed;
     user-select: none;
+    top: 57px;
+}
+
+.content {
+  margin-top: 44px;
 }
 
 .gallery-button {
@@ -249,8 +282,6 @@ const Gallery_Style = styled.div`
     padding: 0;
     padding-top: 0.3rem;
 }
-
-
 
 .gallery-button:hover {
     background-color: ${styles_var.gray_highlight};
@@ -265,6 +296,15 @@ const Gallery_Style = styled.div`
         /* pointer-events: none; */
         transform: scale(0.7);
     }
+
+}
+
+.description {
+    background-color: ${styles_var.white_color};
+
+p {
+    font-size: 0.9rem;
+}
 
 }
 
@@ -285,19 +325,28 @@ p {
   top: 58.38px;
 }
 
-.sticky-nav-aid {
-  margin-top: 44px;
-}
-
 }
 
 @media only screen and (min-width: ${styles_var.tablet}) {  
+
+.gallery-header {
+  position: relative;
+  top: 0;
+}
+
+.content {
+  margin-top: 0;
+}
 
 .sticky-nav {
   position: fixed;
   /* padding-bottom: 1rem; */
   transition-duration: 1.2s;
   top: 68px;
+}
+
+.sticky-nav-aid {
+  margin-top: 45px;
 }
 
 p {

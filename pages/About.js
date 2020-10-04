@@ -5,6 +5,7 @@ import styled from 'styled-components'
 import * as styles_var from '../Styles/Variables'
 import AboutMD from './Markdown/About.md'
 import { motion } from 'framer-motion';
+import Switch from '@material-ui/core/Switch';
 
 const mainVariant = {
   initial: {
@@ -23,8 +24,9 @@ const mainVariant = {
 
 export default function About() {
 
-  const { navMenu } = useContext(AppState)
+  const { navMenu, showAnimations } = useContext(AppState)
   const [openMenu, setOpenMenu] = navMenu
+  const [toggleAnimate, setAnimate] = showAnimations
 
   useEffect(() => {
     // Always do navigations after the first render
@@ -36,7 +38,7 @@ export default function About() {
     <About_Style>
       {/* <h1>This is About me &#128521;</h1> */}
       <motion.div
-        variants={mainVariant}
+        variants={toggleAnimate ? mainVariant : null}
         initial="initial"
         animate="enter"
         exit="initial"
@@ -46,6 +48,22 @@ export default function About() {
             <div>
               {/* <h1>Hmm. This page is also under construction. Please check back soon.</h1> */}
               <AboutMD />
+            </div>
+            <br />
+            <br />
+            <div className="experimental-features">
+              <div className="border">
+                <div className="animations">
+                  <p>enable fancy animations<br/><small>(experimental and does not persist)</small></p>
+                  <Switch
+                    checked={toggleAnimate}
+                    onChange={() => { setAnimate(!toggleAnimate) }}
+                    color="primary"
+                    name="animateButton"
+                    inputProps={{ 'aria-label': 'primary checkbox' }}
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -83,6 +101,31 @@ p {
 strong {
     font-weight: 400;
 }
+
+.experimental-features {
+  text-align: center;
+
+.border {
+  background: linear-gradient(to right, red, orange);
+  padding: 2px;
+  display: inline-block;
+  border-radius: 0.5rem;
+}
+
+.animations {
+  display: inline-block;
+  padding: 0.1rem 1rem;
+  border: solid 2px transparent;
+  border-radius: 0.5rem;
+  background-color: white;
+}
+
+p {
+  padding: 0.4rem 0;
+}
+
+}
+
 
 }
 

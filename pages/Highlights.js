@@ -6,7 +6,7 @@ import MainGridStyle from '../Styles/MainGridStyle'
 import { useRouter } from 'next/router'
 import Preview from './Preview'
 import Masonry from 'react-masonry-css'
-import { motion } from "framer-motion"
+import { motion } from 'framer-motion'
 
 //JSON Image data
 import highlights_data from '../public/json/highlights_data.json'
@@ -32,7 +32,7 @@ const mainVariant = {
     y: 100,
     opacity: 0,
     scale: 0.9,
-    transition: { ease: "easeOut", duration: 0.3 }
+    transition: { ease: "easeOut", duration: 0.3, delay: 0.2 }
   },
   enter: {
     y: 0,
@@ -44,10 +44,10 @@ const mainVariant = {
 
 export default function Highlights() {
 
-  const { navMenu, showPreview } = useContext(AppState)
+  const { navMenu, showPreview, showAnimations } = useContext(AppState)
   const [openMenu, setOpenMenu] = navMenu
-
   const [openImgPreview, setOpenImgPreview] = showPreview
+  const [toggleAnimate, setAnimate] = showAnimations
 
   const router = useRouter()
 
@@ -101,7 +101,7 @@ export default function Highlights() {
     <MainGridStyle>
 
       <motion.div
-        variants={mainVariant}
+        variants={toggleAnimate ? mainVariant : null}
         initial="initial"
         animate="enter"
         exit="initial"

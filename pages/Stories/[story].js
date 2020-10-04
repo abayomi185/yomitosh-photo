@@ -3,11 +3,10 @@ import Layout from '../Layout';
 import { useRouter } from 'next/router'
 import { useEffect, useContext, useState } from 'react'
 import { AppState } from '../../context/AppState'
+import { motion } from 'framer-motion';
 import styled from 'styled-components';
 import * as styles_var from '../../Styles/Variables'
 import Masonry from 'react-masonry-css'
-import { motion } from 'framer-motion';
-
 import MainGridStyle from '../../Styles/MainGridStyle'
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
@@ -86,10 +85,9 @@ let widthinpx = `${width}px`
 
 export default function Story({ storyTitle, storyStyle, storyLayout }) {
 
-  const { navMenu } = useContext(AppState)
+  const { navMenu, showAnimations } = useContext(AppState)
   const [openMenu, setOpenMenu] = navMenu
-
-  let masonryGridStyle = ""
+  const [toggleAnimate, setAnimate] = showAnimations
 
   const router = useRouter()
 
@@ -101,9 +99,9 @@ export default function Story({ storyTitle, storyStyle, storyLayout }) {
     const offset = window.scrollY
     const screenWidth = window.innerWidth
 
-    if ((offset > 1) && (screenWidth < styles_var.tabletSizeValue)) {
+    if ((offset > 1) && (screenWidth < styles_var.tabletSizeValue) && (screenWidth < styles_var.desktopSizeValue)) {
       setScrolled(true);
-    } else if ((offset > 68) && (screenWidth < styles_var.desktopSizeValue)) {
+    } else if ((offset > 113) && (screenWidth < styles_var.desktopSizeValue)) {
       setScrolled(true);
     } else {
       setScrolled(false);
@@ -171,21 +169,17 @@ export default function Story({ storyTitle, storyStyle, storyLayout }) {
     const indexCheck = galleryPathCheck()
 
     if ((direction == "right") && (indexCheck[0] != "end")) {
-      router.push({
-        pathname: `/Stories/${paths[(indexCheck[1] + 1)]}`
-      })
+      router.push(`/Stories/[story]`, `/Stories/${paths[(indexCheck[1] + 1)]}`, {shallow: false})
     } else if ((direction == "left") && (indexCheck[0] != "start")) {
-      router.push({
-        pathname: `/Stories/${paths[(indexCheck[1] - 1)]}`
-      })
+      router.push(`/Stories/[story]`, `/Stories/${paths[(indexCheck[1] - 1)]}`, {shallow: false})
     } else {
-      console.log("click");
+      // console.log("click");
     }
 
   }
 
 
-  const GalleryImages = stories_data.stories.[storyTitle].images.map((image, index) => {
+  const GalleryImages = stories_data.stories.[storyTitle].images.map((imageData, index) => {
 
     return (
       <div key={index}
@@ -198,7 +192,7 @@ export default function Story({ storyTitle, storyStyle, storyLayout }) {
           // imageClick(element.image, element.alt)
         }}
       >
-        <img src={image} />
+        <img src={imageData.image} alt={imageData.alt} />
       </div>
     );
   });
@@ -240,16 +234,15 @@ export default function Story({ storyTitle, storyStyle, storyLayout }) {
 
       </div>
 
-      {/* { storyStyle == "single" ? "grid" : "grid-single" } */}
       <motion.div
-        variants={mainVariant}
+        variants={toggleAnimate ? mainVariant : null}
         initial="initial"
         animate="enter"
         exit="initial"
       >
-        <MainGridStyle className={`${stickyNavAidClass}`}>
+        <MainGridStyle className={`${stickyNavAidClass} content`}>
           <Masonry
-            breakpointCols={storyStyle == "single" ? singleBreakpoint : breakpointColumnsObj}
+            breakpointCols={storyLayout == "column" ? singleBreakpoint : breakpointColumnsObj}
             className="grid"
             columnClassName={storyLayout == "column" ? "grid-column-single" : "grid-column"}
           >
@@ -257,7 +250,6 @@ export default function Story({ storyTitle, storyStyle, storyLayout }) {
           </Masonry>
         </MainGridStyle>
       </motion.div>
-
 
     </Gallery_Style>
   )
@@ -272,8 +264,13 @@ const Gallery_Style = styled.div`
     display: flex;
     justify-content: center;
     width: 100%;
-    position: relative;
+    position: fixed;
     user-select: none;
+    top: 57px;
+}
+
+.content {
+  margin-top: 44px;
 }
 
 .gallery-button {
@@ -329,19 +326,28 @@ p {
   top: 58.38px;
 }
 
-.sticky-nav-aid {
-  margin-top: 44px;
-}
-
 }
 
 @media only screen and (min-width: ${styles_var.tablet}) {  
+
+.gallery-header {
+  position: relative;
+    top: 0;
+}
+
+.content {
+  margin-top: 0;
+}
 
 .sticky-nav {
   position: fixed;
   /* padding-bottom: 1rem; */
   transition-duration: 1.2s;
   top: 68px;
+}
+
+.sticky-nav-aid {
+  margin-top: 45px;
 }
 
 p {

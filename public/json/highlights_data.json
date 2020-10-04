@@ -1,6 +1,12 @@
 {
   "Highlights": [
     {
+      "image": "Images/Highlights/london-at-night.jpg",
+      "alt": "London at Night",
+      "description": "",
+      "link": ""
+    },
+    {
       "image": "Images/Highlights/roots-creative.jpg",
       "alt": "Roots Creative LDN  (@RootsCreatives)",
       "description": "",
@@ -21,6 +27,12 @@
     {
       "image": "Images/Highlights/lit-tunnel.jpg",
       "alt": "",
+      "description": "",
+      "link": ""
+    },
+    {
+      "image": "Images/Highlights/lockdown.jpg",
+      "alt": "Lockdown 2020",
       "description": "",
       "link": ""
     },

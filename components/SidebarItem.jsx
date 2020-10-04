@@ -24,15 +24,25 @@ function SidebarItem(props) {
 
   }
 
+  function changeRoute() {
+    router.push({
+      pathname: props.link,
+    })
+  }
+
   return (
     <SidebarItem_Style>
       <Link href={props.link} shallow >
         <a>
+        {/* <div 
+          onClick={changeRoute}    
+        > */}
           {/* <li className={`hover-transition ${router.pathname == props.link ? "active-item" : ""}`}> */}
           <li className={`hover-transition ${checkPath()}`}>
             <p className="sidebar-item">{props.item}</p>
             {/* <h2 className="sidebar-item hover-transition"><Link href={props.link}><a>{props.item}</a></Link></h2> */}
           </li>
+        {/* </div> */}
         </a>
       </Link>
     </SidebarItem_Style>

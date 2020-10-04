@@ -10,7 +10,6 @@ import Masonry from 'react-masonry-css'
 
 //JSON Image data
 import galleries_data from '../public/json/galleries_data.json'
-import galleries_data2 from '../public/json/old_galleries_data.json'
 
 const breakpointColumnsObj = {
   default: 4,
@@ -36,8 +35,9 @@ const mainVariant = {
 
 export default function Galleries(props) {
 
-  const { navMenu } = useContext(AppState)
+  const { navMenu, showAnimations } = useContext(AppState)
   const [openMenu, setOpenMenu] = navMenu
+  const [toggleAnimate, setAnimate] = showAnimations
 
   const router = useRouter()
   const currentPath = router.pathname
@@ -49,16 +49,11 @@ export default function Galleries(props) {
   }, [])
 
   function goToGallery(title) {
-    router.push({
-      pathname: `${currentPath}/${title}`,
-      // pathname: `${currentPath}/Gallery`,
-      // query: {title: title}
-    })
+    router.push(`${currentPath}/[gallery]`, `${currentPath}/${title}`, {shallow: true})
   }
 
   const Galleries = Object.entries(galleries_data.galleries).map(([key, value]) => {
-    // console.log(key);
-    // console.log(value.thumbnail_images);
+
     return (
       <motion.button key={key}
         className="gallery-item"
@@ -67,7 +62,12 @@ export default function Galleries(props) {
         <div className="rectangle">
           {value.thumbnail_images.map((thumbnail, index) => {
             return (
-              <div key={index} className="thumbnail-div" style={{ backgroundImage: `url(${thumbnail})` }} />
+              <div key={index}
+                className={value.thumbs == "single" ? "thumbnail-div-single" : "thumbnail-div"}
+                style={{ backgroundImage: `url(${thumbnail})` }}
+              >
+                {/* <img className={`image${index}`} src={thumbnail} /> */}
+              </div>
             )
           })}
 
@@ -84,7 +84,7 @@ export default function Galleries(props) {
       {/* <h1>It seems like I'm still developing this page. Please check again soon.</h1> */}
 
       <motion.div
-        variants={mainVariant}
+        variants={toggleAnimate ? mainVariant : null}
         initial="initial"
         animate="enter"
         exit="initial"

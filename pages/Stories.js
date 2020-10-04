@@ -12,7 +12,8 @@ import Masonry from 'react-masonry-css'
 import stories_data from '../public/json/stories_data.json'
 
 const breakpointColumnsObj = {
-  default: 3,
+  default: 4,
+  2160: 3,
   1366: 2,
   [styles_var.tabletSizeValue]: 1
 };
@@ -34,8 +35,9 @@ const mainVariant = {
 
 export default function Stories(props) {
 
-  const { navMenu } = useContext(AppState)
+  const { navMenu, showAnimations } = useContext(AppState)
   const [openMenu, setOpenMenu] = navMenu
+  const [toggleAnimate, setAnimate] = showAnimations
 
   const router = useRouter()
   const currentPath = router.pathname
@@ -47,22 +49,15 @@ export default function Stories(props) {
   }, [])
 
   function goToGallery(title) {
-    router.push({
-      pathname: `${currentPath}/${title}`,
-      // pathname: `${currentPath}/Gallery`,
-      // query: {title: title}
-    })
+    router.push(`${currentPath}/[story]`, `${currentPath}/${title}`, {shallow: true})
   }
 
   const Stories = Object.entries(stories_data.stories).map(([key, value]) => {
+
     return (
-      <button key={key}
-        // className="grid-item"
+      <motion.button key={key}
         className="gallery-item"
-        // onClick={() => push(element.image, element.alt)}
-        onClick={() => {
-          goToGallery(key)
-        }}
+        onClick={() => { goToGallery(key) }}
       >
         <div className="rectangle">
           {value.thumbnail_images.map((thumbnail, index) => {
@@ -77,11 +72,10 @@ export default function Stories(props) {
           })}
 
         </div>
-        <h1 class="hover-transition">{value.title}</h1>
-      </button>
+        <h1 className="hover-transition">{value.title}</h1>
+      </motion.button>
     );
   });
-
 
   return (
 
@@ -90,7 +84,7 @@ export default function Stories(props) {
       {/* <h1>It seems like I'm still developing this page. Please check again soon.</h1> */}
 
       <motion.div
-        variants={mainVariant}
+        variants={toggleAnimate ? mainVariant : null}
         initial="initial"
         animate="enter"
         exit="initial"
@@ -103,7 +97,6 @@ export default function Stories(props) {
           {Stories}
         </Masonry>
       </motion.div>
-
     </GalleryGridStyle>
 
   )

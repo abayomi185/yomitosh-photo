@@ -30,8 +30,9 @@ const mainVariant = {
 
 export default function Contact() {
 
-  const { navMenu } = useContext(AppState)
+  const { navMenu, showAnimations } = useContext(AppState)
   const [openMenu, setOpenMenu] = navMenu
+  const [toggleAnimate, setAnimate] = showAnimations
 
   const instagram = "https://instagram.com/yomi185"
   const mail = "mailto:yomitosh.photo@gamil.com"
@@ -50,7 +51,7 @@ export default function Contact() {
   return (
     <Contact_Style>
       <motion.div
-        variants={mainVariant}
+        variants={toggleAnimate ? mainVariant : null}
         initial="initial"
         animate="enter"
         exit="initial"
