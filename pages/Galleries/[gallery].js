@@ -365,6 +365,15 @@ p {
     width: calc(100% - 240px);
 }
 
+.description {
+    margin-top: 60px;
+
+p {
+    font-size: 0.9rem;
+}
+
+}
+
 .grid {
     margin-top: 0;
 }
