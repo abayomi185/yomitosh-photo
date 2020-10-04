@@ -78,7 +78,6 @@ export default function Galleries(props) {
   });
 
   return (
-
     <GalleryGridStyle>
       {/* <h1>This is my domain!</h1> */}
       {/* <h1>It seems like I'm still developing this page. Please check again soon.</h1> */}

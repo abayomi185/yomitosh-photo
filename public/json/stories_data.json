@@ -1,80 +1,80 @@
 {
   "stories": {
     "Jessi": {
-      "title": "崔萌",
+      "title": "Jessi",
       "thumbs": "single",
       "layout": "column",
-      "description": "Photoshoot with 萌 (Jessi) and Sabrina",
+      "description": "Photoshoot with 崔萌 (Jessi) and Sabrina",
       "thumbnail_images": [
-        "/Images/Stories/崔萌/jessi-thumbnail.jpg"
+        "/Images/Stories/Jessi/jessi-thumbnail.jpg"
       ],
       "images": [
         {
-          "image": "/Images/Stories/崔萌/jessi-earring.jpg",
+          "image": "/Images/Stories/Jessi/jessi-earring.jpg",
           "alt": ""
         },
         {
-          "image": "/Images/Stories/崔萌/jessi-stare.jpg",
+          "image": "/Images/Stories/Jessi/jessi-stare.jpg",
           "alt": ""
         },
         {
-          "image": "/Images/Stories/崔萌/jessi-run-wide.jpg",
+          "image": "/Images/Stories/Jessi/jessi-run-wide.jpg",
           "alt": ""
         },
         {
-          "image": "/Images/Stories/崔萌/jessi-run-tight.jpg",
+          "image": "/Images/Stories/Jessi/jessi-run-tight.jpg",
           "alt": ""
         },
         {
-          "image": "/Images/Stories/崔萌/jessi-corner.jpg",
+          "image": "/Images/Stories/Jessi/jessi-corner.jpg",
           "alt": ""
         },
         {
-          "image": "/Images/Stories/崔萌/jessi-corner-bts.jpg",
+          "image": "/Images/Stories/Jessi/jessi-corner-bts.jpg",
           "alt": ""
         },
         {
-          "image": "/Images/Stories/崔萌/jessi.jpg",
+          "image": "/Images/Stories/Jessi/jessi.jpg",
           "alt": ""
         },
         {
-          "image": "/Images/Stories/崔萌/jessi-smile.jpg",
+          "image": "/Images/Stories/Jessi/jessi-smile.jpg",
           "alt": ""
         },
         {
-          "image": "/Images/Stories/崔萌/jessi-touchup.jpg",
+          "image": "/Images/Stories/Jessi/jessi-touchup.jpg",
           "alt": ""
         },
         {
-          "image": "/Images/Stories/崔萌/jessi-and-sab.jpg",
+          "image": "/Images/Stories/Jessi/jessi-and-sab.jpg",
           "alt": ""
         },
         {
-          "image": "/Images/Stories/崔萌/jessi-and-sab-walking.jpg",
+          "image": "/Images/Stories/Jessi/jessi-and-sab-walking.jpg",
           "alt": ""
         },
         {
-          "image": "/Images/Stories/崔萌/jessi-and-sab-pose.jpg",
+          "image": "/Images/Stories/Jessi/jessi-and-sab-pose.jpg",
           "alt": ""
         },
         {
-          "image": "/Images/Stories/崔萌/jessi-pose.jpg",
+          "image": "/Images/Stories/Jessi/jessi-pose.jpg",
           "alt": ""
         },
         {
-          "image": "/Images/Stories/崔萌/jessi-and-sab-dance.jpg",
+          "image": "/Images/Stories/Jessi/jessi-and-sab-dance.jpg",
           "alt": ""
         },
         {
-          "image": "/Images/Stories/崔萌/jessi-cool.jpg",
+          "image": "/Images/Stories/Jessi/jessi-cool.jpg",
           "alt": ""
         },
         {
-          "image": "/Images/Stories/崔萌/photoshoot-break.jpg",
+          "image": "/Images/Stories/Jessi/photoshoot-break.jpg",
           "alt": ""
         },
         {
-          "image": "/Images/Stories/崔萌/jessi-takes-off-her-head-omg.jpg",
+          "image": "/Images/Stories/Jessi/jessi-takes-off-her-head-omg.jpg",
           "alt": ""
         }
       ]
