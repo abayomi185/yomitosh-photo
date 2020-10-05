@@ -25,7 +25,7 @@ export default SocialIcons
 
 //------------------Styles------------------
 
-const SocialIcons_Style = styled.div`
+export const SocialIcons_Style = styled.div`
 
 @media only screen and (min-width: ${styles_var.mobile}) {
 

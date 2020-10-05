@@ -72,7 +72,7 @@ export default function About() {
   )
 }
 
-const About_Style = styled.div`
+export const About_Style = styled.div`
 
 @media only screen and (min-width: ${styles_var.mobile}) {
 

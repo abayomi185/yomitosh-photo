@@ -38,10 +38,14 @@ nav {
   z-index: 1;
 }
 
-.content-area {
-  display: flex;
-  justify-content: center;
+button {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
   width: 100%;
+  outline:none;
+  cursor: pointer;
 }
 
 .content-area {

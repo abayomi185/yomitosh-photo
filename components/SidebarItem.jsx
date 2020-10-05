@@ -33,7 +33,6 @@ function SidebarItem(props) {
       {/* <Link href={props.link} >
         <a> */}
         <button
-          tabindex="0"
           onClick={changeRoute}
         >
           {/* <li className={`hover-transition ${router.pathname == props.link ? "active-item" : ""}`}> */}
@@ -53,19 +52,9 @@ export default SidebarItem
 
 //------------------Styles------------------
 
-const SidebarItem_Style = styled.div`
+export const SidebarItem_Style = styled.div`
 
 @media only screen and (min-width: ${styles_var.mobile}) {
-
-button {
-  margin: 0;
-  padding: 0;
-  border: none;
-  background-color: transparent;
-  width: 100%;
-  outline:none;
-  cursor: pointer;
-}
 
 li {
   

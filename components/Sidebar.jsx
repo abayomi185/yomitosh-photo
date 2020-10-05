@@ -81,7 +81,7 @@ export default function Sidebar() {
 
 //------------------Styles------------------
 
-const Sidebar_Style = styled.div`
+export const Sidebar_Style = styled.div`
 
 @media only screen and (min-width: ${styles_var.mobile}) {
 

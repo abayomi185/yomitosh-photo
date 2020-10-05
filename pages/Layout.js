@@ -32,7 +32,8 @@ export default function Layout(props) {
         <Head>
           <title>Y O M I .</title>
           <meta name="description" content="Photography Journey by Yomi." />
-
+          <meta charSet="utf-8" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
           {/* <meta name="robots" content="index, nofollow" /> */}
           <link rel="icon" href="/favicon.ico" />
           {/* Google Fonts */}

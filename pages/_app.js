@@ -8,6 +8,12 @@ import { motion, AnimatePresence } from "framer-motion"
 import { initGA, logPageView } from '../utils/analytics'
 import NProgress from 'nprogress'
 
+import MainGridStyle from '../Styles/MainGridStyle'
+import GalleryGridStyle from '../Styles/GalleryGridStyle'
+import Gallery_View_Style from '../Styles/GalleryViewStyle'
+import { Contact_Style } from './Contact'
+import { About_Style } from './About'
+
 export default function MyApp({ Component, pageProps, router }) {
 
   const [openMenu, setOpenMenu] = useState(false)
