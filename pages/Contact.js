@@ -91,7 +91,7 @@ export default function Contact() {
             </div>
 
             <div className="form">
-              <form target="_blank" action="https://formsubmit.co/your@email.com" method="POST">
+              <form target="_blank" action="https://formsubmit.co/yomitosh.photo@gmail.com" method="POST">
                 <div class="form-group">
                   <div class="form-row">
 
@@ -99,11 +99,12 @@ export default function Contact() {
                       {/* <input type="text" name="name" class="form-control" placeholder="Full Name" required /> */}
                       <TextField
                         id="outlined-basic"
+                        name="name"
                         label="name"
                         variant="outlined"
                         fullWidth
                         style={{ borderColor: styles_var.black_color }}
-
+                        required
                       />
                     </div>
 
@@ -111,9 +112,11 @@ export default function Contact() {
                       {/* <input type="email" name="email" class="form-control" placeholder="Email Address" required /> */}
                       <TextField
                         id="outlined-basic"
+                        name="email"
                         label="email"
                         variant="outlined"
                         fullWidth
+                        required
                       />
                     </div>
 
@@ -121,11 +124,13 @@ export default function Contact() {
                       {/* <textarea placeholder="Your Message" class="form-control" name="message" rows="10" required></textarea> */}
                       <TextField
                         id="outlined-multiline-static"
+                        name="message"
                         label="Message"
                         multiline
                         rows={7}
                         variant="outlined"
                         fullWidth
+                        required
                       />
                     </div>
 
