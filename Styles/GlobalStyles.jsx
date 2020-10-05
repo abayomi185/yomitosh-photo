@@ -5,6 +5,13 @@ const GlobalStyle = createGlobalStyle`
   
 @media only screen and (min-width: ${styles_var.mobile}) {
 
+${'' /* *{
+    background: #000 !important;
+    color: #0f0 !important;
+    outline: solid #f00 1px !important;
+} */}
+
+
 /* 1 column grid */
 
 html, body {

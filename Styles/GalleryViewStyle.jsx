@@ -16,7 +16,7 @@ const Gallery_View_Style = styled.div`
 }
 
 .content {
-  margin-top: 44px;
+  margin-top: 0;
 }
 
 .gallery-button {

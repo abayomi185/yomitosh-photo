@@ -98,6 +98,7 @@ export const Sidebar_Style = styled.div`
   justify-content: space-between;
   background: ${styles_var.white_color};
   z-index: 1;
+  /* height: 58.38px; */
 }
 
 .sidebar-items {

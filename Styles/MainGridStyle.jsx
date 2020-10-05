@@ -55,7 +55,7 @@ const MansoryStyle = styled.div`
 }
 
 .grid-item-single {
-    margin: 15px;
+    margin: 7.5px;
 }
 
 
