@@ -44,10 +44,6 @@ nav {
   width: 100%;
 }
 
-nav {
-  z-index: 1;
-}
-
 .content-area {
   display: flex;
   justify-content: center;

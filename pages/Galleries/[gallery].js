@@ -169,9 +169,9 @@ export default function Gallery({ galleryTitle, galleryStyle, galleryLayout }) {
     const indexCheck = galleryPathCheck()
 
     if ((direction == "right") && (indexCheck[0] != "end")) {
-      router.push(`/Galleries/[gallery]`, `/Galleries/${paths[(indexCheck[1] + 1)]}`, {shallow: false})
+      router.push(`/Galleries/[gallery]`, `/Galleries/${paths[(indexCheck[1] + 1)]}`)
     } else if ((direction == "left") && (indexCheck[0] != "start")) {
-      router.push(`/Galleries/[gallery]`, `/Galleries/${paths[(indexCheck[1] - 1)]}`, {shallow: false})
+      router.push(`/Galleries/[gallery]`, `/Galleries/${paths[(indexCheck[1] - 1)]}`)
     } else {
       // console.log("click");
     }

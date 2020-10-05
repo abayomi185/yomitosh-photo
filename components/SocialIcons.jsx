@@ -13,7 +13,7 @@ function SocialIcons(props) {
     return (
         <SocialIcons_Style>
             <div className="icons">
-                <a href={instagram} ><InstagramIcon className="social-icon hover-transition" style={{ color: styles_var.darkgray_color }}/></a>
+                <a href={instagram} ><InstagramIcon className="social-icon" style={{ color: styles_var.darkgray_color }}/></a>
                 <a href={mail} ><MailOutlineIcon className="social-icon" style={{ color: styles_var.darkgray_color }} /></a>
             </div>
         </SocialIcons_Style>
@@ -31,6 +31,7 @@ const SocialIcons_Style = styled.div`
 
 .social-icon {
   padding: 0 0.1rem;
+  max-width: 20px;
 }
 
 .social-icon:hover {

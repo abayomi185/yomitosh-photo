@@ -25,26 +25,25 @@ function SidebarItem(props) {
   }
 
   function changeRoute() {
-    router.push({
-      pathname: props.link,
-    })
+    router.push(`${props.link}`)
   }
 
   return (
     <SidebarItem_Style>
-      <Link href={props.link} >
-        <a>
-        {/* <div 
-          onClick={changeRoute}    
-        > */}
+      {/* <Link href={props.link} >
+        <a> */}
+        <button
+          tabindex="0"
+          onClick={changeRoute}
+        >
           {/* <li className={`hover-transition ${router.pathname == props.link ? "active-item" : ""}`}> */}
           <li className={`hover-transition ${checkPath()}`}>
             <p className="sidebar-item">{props.item}</p>
             {/* <h2 className="sidebar-item hover-transition"><Link href={props.link}><a>{props.item}</a></Link></h2> */}
           </li>
-        {/* </div> */}
-        </a>
-      </Link>
+        </button>
+        {/* </a>
+      </Link> */}
     </SidebarItem_Style>
   )
 }
@@ -57,6 +56,16 @@ export default SidebarItem
 const SidebarItem_Style = styled.div`
 
 @media only screen and (min-width: ${styles_var.mobile}) {
+
+button {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  width: 100%;
+  outline:none;
+  cursor: pointer;
+}
 
 li {
   

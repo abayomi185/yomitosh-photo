@@ -49,7 +49,7 @@ export default function Galleries(props) {
   }, [])
 
   function goToGallery(title) {
-    router.push(`${currentPath}/[gallery]`, `${currentPath}/${title}`, {shallow: false})
+    router.push(`${currentPath}/[gallery]`, `${currentPath}/${title}`)
   }
 
   const Galleries = Object.entries(galleries_data.galleries).map(([key, value]) => {
