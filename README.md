@@ -1,3 +1,3 @@
-Photograpahy Site using Next.js
+## Photograpahy Site using Next.js
 
-[yomitosh.com]
+[](yomitosh.com)
