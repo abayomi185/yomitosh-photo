@@ -35,7 +35,7 @@ export default function Contact() {
   const [toggleAnimate, setAnimate] = showAnimations
 
   const instagram = "https://instagram.com/yomi185"
-  const mail = "mailto:yomitosh.photo@gamil.com"
+  const mail = "mailto:yomitosh.photo@gmail.com"
 
   const iconStyle = {
     color: styles_var.darkgray_color,
