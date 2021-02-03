@@ -1,0 +1,110 @@
+{
+  "stories": {
+    "Jessi": {
+      "title": "崔萌",
+      "thumbs": "single",
+      "layout": "column",
+      "description": "Photoshoot with 崔萌 (Jessi) and Sabrina",
+      "thumbnail_images": [
+        "/Images/Stories/Jessi/jessi-thumbnail.jpg"
+      ],
+      "images": [
+        {
+          "image": "/Images/Stories/Jessi/jessi-earring.jpg",
+          "alt": ""
+        },
+        {
+          "image": "/Images/Stories/Jessi/jessi-stare.jpg",
+          "alt": ""
+        },
+        {
+          "image": "/Images/Stories/Jessi/jessi-run-wide.jpg",
+          "alt": ""
+        },
+        {
+          "image": "/Images/Stories/Jessi/jessi-run-tight.jpg",
+          "alt": ""
+        },
+        {
+          "image": "/Images/Stories/Jessi/jessi-corner.jpg",
+          "alt": ""
+        },
+        {
+          "image": "/Images/Stories/Jessi/jessi-corner-bts.jpg",
+          "alt": ""
+        },
+        {
+          "image": "/Images/Stories/Jessi/jessi.jpg",
+          "alt": ""
+        },
+        {
+          "image": "/Images/Stories/Jessi/jessi-smile.jpg",
+          "alt": ""
+        },
+        {
+          "image": "/Images/Stories/Jessi/jessi-touchup.jpg",
+          "alt": ""
+        },
+        {
+          "image": "/Images/Stories/Jessi/jessi-and-sab.jpg",
+          "alt": ""
+        },
+        {
+          "image": "/Images/Stories/Jessi/jessi-and-sab-walking.jpg",
+          "alt": ""
+        },
+        {
+          "image": "/Images/Stories/Jessi/jessi-and-sab-pose.jpg",
+          "alt": ""
+        },
+        {
+          "image": "/Images/Stories/Jessi/jessi-pose.jpg",
+          "alt": ""
+        },
+        {
+          "image": "/Images/Stories/Jessi/jessi-and-sab-dance.jpg",
+          "alt": ""
+        },
+        {
+          "image": "/Images/Stories/Jessi/jessi-cool.jpg",
+          "alt": ""
+        },
+        {
+          "image": "/Images/Stories/Jessi/photoshoot-break.jpg",
+          "alt": ""
+        },
+        {
+          "image": "/Images/Stories/Jessi/jessi-takes-off-her-head-omg.jpg",
+          "alt": ""
+        }
+      ]
+    },
+    "CarsnBurgers": {
+      "title": "Cars n Burgers",
+      "thumbs": "single",
+      "layout": "column",
+      "description": "",
+      "thumbnail_images": [
+        "/Images/Stories/CarsBurgers/bmw-2002-rear-thumbnail.jpg"
+      ],
+      "images": [
+        {
+          "image": "/Images/Stories/CarsBurgers/chevy.jpg",
+          "alt": ""
+        },
+        {
+          "image": "/Images/Stories/CarsBurgers/chevy-ornament.jpg",
+          "alt": ""
+        },
+        {
+          "image": "/Images/Stories/CarsBurgers/bmw-2002-rear.jpg",
+          "alt": ""
+        },
+        {
+          "image": "/Images/Stories/CarsBurgers/bmw-2002-side.jpg",
+          "alt": ""
+        }
+      ]
+    }
+  }
+}

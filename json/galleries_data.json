@@ -1,0 +1,121 @@
+{
+  "galleries": {
+    "Street": {
+      "title": "Street",
+      "thumbs": "multiple",
+      "layout": "grid",
+      "description": "",
+      "thumbnail_images": [
+        "/Images/Galleries/Street/museum-thumbnail.jpg",
+        "/Images/Galleries/Street/station-man-thumbnail.jpg",
+        "/Images/Galleries/Street/shiny-globe-thumbnail.jpg",
+        "/Images/Galleries/Street/cozy-salon-thumbnail.jpg"
+      ],
+      "images": [
+        {
+          "image": "/Images/Galleries/Street/museum.jpg",
+          "alt": ""
+        },
+        {
+          "image": "/Images/Galleries/Street/station-man.jpg",
+          "alt": ""
+        },
+        {
+          "image": "/Images/Galleries/Street/shiny-globe.jpg",
+          "alt": ""
+        },
+        {
+          "image": "/Images/Galleries/Street/cozy-salon.jpg",
+          "alt": ""
+        }
+      ]
+    },
+    "Landscape": {
+      "title": "Landscape",
+      "thumbs": "multiple",
+      "layout": "grid",
+      "description": "",
+      "thumbnail_images": [
+        "/Images/Galleries/Landscape/hasselblad-thumbnail.jpg",
+        "/Images/Galleries/Landscape/old-skool-photo-thumbnail.jpg",
+        "/Images/Galleries/Landscape/sheep-exclaimed-thumbnail.jpg",
+        "/Images/Galleries/Landscape/views-thumbnail.jpg"
+      ],
+      "images": [
+        {
+          "image": "/Images/Galleries/Landscape/hasselblad.jpg",
+          "alt": ""
+        },
+        {
+          "image": "/Images/Galleries/Landscape/old-skool-photo.jpg",
+          "alt": ""
+        },
+        {
+          "image": "/Images/Galleries/Landscape/sheep-exclaimed.jpg",
+          "alt": ""
+        },
+        {
+          "image": "/Images/Galleries/Landscape/views.jpg",
+          "alt": ""
+        },
+        {
+          "image": "/Images/Galleries/Landscape/long-gaze.jpg",
+          "alt": ""
+        }
+      ]
+    },
+    "BnW": {
+      "title": "B&W",
+      "thumbs": "multiple",
+      "layout": "grid",
+      "description": "",
+      "thumbnail_images": [
+        "/Images/Galleries/BnW/still-thumbnail.jpg",
+        "/Images/Galleries/BnW/chic-thumbnail.jpg",
+        "/Images/Galleries/BnW/long-journey-thumbnail.jpg",
+        "/Images/Galleries/BnW/victoria-bus-thumbnail.jpg"
+      ],
+      "images": [
+        {
+          "image": "/Images/Galleries/BnW/still.jpg",
+          "alt": ""
+        },
+        {
+          "image": "/Images/Galleries/BnW/chic.jpg",
+          "alt": ""
+        },
+        {
+          "image": "/Images/Galleries/BnW/long-journey.jpg",
+          "alt": ""
+        },
+        {
+          "image": "/Images/Galleries/BnW/victoria-bus.jpg",
+          "alt": ""
+        },
+        {
+          "image": "/Images/Galleries/BnW/open247.jpg",
+          "alt": ""
+        },
+        {
+          "image": "/Images/Galleries/BnW/Leeds-lady-street.jpg",
+          "alt": ""
+        }
+      ]
+    },
+    "Automobile": {
+      "title": "Automobile",
+      "thumbs": "single",
+      "layout": "column",
+      "description": "",
+      "thumbnail_images": [
+        "/Images/Galleries/Automobile/old-merc-thumbnail.jpg"
+      ],
+      "images": [
+        {
+          "image": "/Images/Galleries/Automobile/old-merc.jpg",
+          "alt": ""
+        }
+      ]
+    }
+  }
+}
